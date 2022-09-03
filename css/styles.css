@@ -1,0 +1,54 @@
+
+
+
+
+
+
+.portada-pp{
+    height: 459px;
+    width: 100%;
+}
+
+
+.portada-pp img{
+    height: 459px;
+    cursor: pointer;
+}
+
+.card-ropaH{
+    width: 18rem;
+}
+
+
+.ocultarP{
+   background-color: rgba(88, 78, 78, 0.493);
+   bottom: 0px;
+   top: 0;
+   transition: 1s ease;
+   height:0;
+   overflow: hidden;
+   position: absolute;
+   width: 100%;
+}
+
+.portada-pp:hover .ocultarP{
+    height: 74%;
+    opacity: 1;
+}
+
+.card-p{
+    width: 18rem;
+    height: 300px;
+}
+
+.card-p img{
+    height:180px;
+}
+
+.div-hover{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+}
