@@ -2,14 +2,14 @@
 
 
 .portada-pp{
-    height: 459px;
+    height: 559px;
     width: 100%;
     overflow: hidden;
 }
 
 
 .portada-pp img{
-    height: 459px;
+    height: 559px;
     cursor: pointer;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .portada-pp:hover .ocultarP{
-    height: 74%;
+    height: 90%;
     opacity: 1;
     
 }
@@ -44,6 +44,7 @@
     align-items: flex-end;
     font-size: 30px;
     width: 100%;
+    margin-top: 100px;
 }
 
 #carouselExampleIntervalm img{
@@ -114,6 +115,10 @@
 }
 
 
+.arg{
+    height: 355px;
+}
+
 
 
 @media all and (max-width:540px){
@@ -159,6 +164,21 @@
  .div-hover a{
     display: none;
  }
+
+ .portada-pp{
+    height: 441px;
+    width: 100%;
+    overflow: hidden;
+ }
+
+
+ .portada-pp img{
+    height: 441px;
+    cursor: pointer;
+ }
+
+ 
+
 }
 
 
@@ -201,4 +221,5 @@
      .div-hover a{
         display: none;
      }
+   
 }
