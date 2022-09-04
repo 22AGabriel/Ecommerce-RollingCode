@@ -7,6 +7,7 @@
 .portada-pp{
     height: 459px;
     width: 100%;
+    overflow: hidden;
 }
 
 
@@ -18,25 +19,25 @@
 
 
 .ocultarP{
-   background-color: rgba(119, 111, 111, 0.219);
+   background-color: rgba(53, 43, 43, 0.548);
    bottom: 0px;
-   top: 0;
    transition: 1s ease;
    height:0;
+   left: 0;
+   top: 0;
    overflow: hidden;
    position: absolute;
-   width: 100%;
+   width: 54px;
+   padding: 10px 0px;
 }
 
 .portada-pp:hover .ocultarP{
     height: 74%;
     opacity: 1;
-}
-
-.card-p{
-    width: 300px;
     
 }
+
+
 
 
 .div-hover{
@@ -45,4 +46,162 @@
     justify-content: center;
     align-items: flex-end;
     font-size: 30px;
+    width: 100%;
+}
+
+#carouselExampleIntervalm img{
+    height: 500px;
+}
+
+
+.card-j{
+    border: transparent;
+    cursor: pointer;
+}
+
+.card-j img{
+    height: 100%;
+    width: 100%;
+}
+
+#carouselExampleIndicators img{
+    height: 600px;
+}
+
+
+/* estilos de hover a la card */
+.ocultarCard{
+    background-color: rgba(53, 43, 43, 0.548);
+   bottom: 0px;
+   transition: 0.5s ease;
+   height:0;
+   left: 0;
+   overflow: hidden;
+   position: absolute;
+   width: 100%;
+   padding: 10px 0px;
+   opacity: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   color: white;
+   border-radius: 30px;
+}
+
+
+.card-j:hover .ocultarCard{
+    height: 100%;
+    opacity: 1;
+}
+
+
+#oferta{
+    text-shadow: 0px 0px 100px;
+    animation: animate 5s infinite linear;
+}
+
+
+@keyframes animate {
+    0%{
+        color: red;
+    }
+
+    50%{
+        color: lawngreen;
+    }
+
+    100%{
+        color:deepskyblue;
+    }
+}
+
+
+
+
+@media all and (max-width:540px){
+  #carouselExampleIndicators{
+    display: none;
+  }
+
+  
+  .ocultarP{
+    background-color: rgba(53, 43, 43, 0.548);
+    bottom: 0px;
+    transition: 1s ease;
+    height:0;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 54px;
+    padding: 10px 0px;
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: end;
+   display: none;
+ }
+ 
+ .portada-pp:hover .ocultarP{
+     height: 62%;
+     opacity: 1;
+     
+ }
+ 
+ .div-hover{
+     display: none;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    width: 100%;
+ }
+
+ .div-hover a{
+    display: none;
+ }
+}
+
+
+@media all and (max-width:991px){
+    .ocultarP{
+        background-color: rgba(53, 43, 43, 0.548);
+        bottom: 0px;
+        transition: 1s ease;
+        height:0;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        position: absolute;
+        width: 54px;
+        padding: 10px 0px;
+       text-align: center;
+       display: flex;
+       justify-content: center;
+       align-items: end; 
+       display: none;
+     }
+     
+     .portada-pp:hover .ocultarP{
+         height: 39%;
+         opacity: 1;
+         
+     }
+     
+     .div-hover{
+         display: none;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        font-size: 30px;
+        width: 77%;
+        display: none;
+     }
+    
+     .div-hover a{
+        display: none;
+     }
 }
