@@ -19,7 +19,7 @@
 
 
 .ocultarP{
-   background-color: rgba(53, 43, 43, 0.548);
+   background-color: rgba(8, 8, 8, 0.548);
    bottom: 0px;
    transition: 1s ease;
    height:0;
@@ -71,7 +71,7 @@
 
 /* estilos de hover a la card */
 .ocultarCard{
-    background-color: rgba(53, 43, 43, 0.548);
+    background-color: rgba(12, 11, 11, 0.548);
    bottom: 0px;
    transition: 0.5s ease;
    height:0;
