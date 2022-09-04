@@ -8,12 +8,142 @@
     <meta name="keywords" content="">
     <meta name="description" content="TP fin de modulo 2 - JavaScript">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/styles.css">
     <title>Administrador</title>
 </head>
 <body>
     <header></header>
-    <main></main>
+    <main>
+        <section class="container">
+            <div class="my-5 text-center">
+                <button type="button" 
+                class="btn btn-primary" 
+                data-bs-toggle="modal" 
+                data-bs-target="#modalAgregarProducto"
+                >Agregar producto</button>
+            </div>
+            <article class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr class="text-center">
+                          <th scope="col">Imagen</th>
+                          <th scope="col">Código</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Precio</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">Categoria</th>
+                          <th scope="col">Stock</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <td scope="row"><img class="w-100" src="https://images.pexels.com/photos/45982/pexels-photo-45982.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..."></td>
+                            <td>1234</td>
+                            <td>Buzo rallado cuello circular </td>
+                            <td>$5000</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cupiditate molestiae sint excepturi non, perferendis a facilis quia iusto, eligendi itaque, iste quod provident beatae.</td>
+                            <td>Buzos</td>
+                            <td>25</td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+                                <button type="button" class="btn btn-warning mt-2">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><img class="w-100" src="https://images.pexels.com/photos/45055/pexels-photo-45055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..."></td>
+                            <td>1234</td>
+                            <td>Buzo rallado cuello circular </td>
+                            <td>$5000</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cupiditate molestiae sint excepturi non, perferendis a facilis quia iusto, eligendi itaque, iste quod provident beatae.</td>
+                            <td>Buzos</td>
+                            <td>25</td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+                                <button type="button" class="btn btn-warning mt-2">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td scope="row"><img class="w-100" src="https://images.pexels.com/photos/4210866/pexels-photo-4210866.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="..."></td>
+                            <td>1234</td>
+                            <td>Buzo rallado cuello circular </td>
+                            <td>$5000</td>
+                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad cupiditate molestiae sint excepturi non, perferendis a facilis quia iusto, eligendi itaque, iste quod provident beatae.</td>
+                            <td>Buzos</td>
+                            <td>25</td>
+                            <td>
+                                <button type="button" class="btn btn-danger">
+                                    <i class="bi bi-trash-fill"></i>
+                                </button>
+                                <button type="button" class="btn btn-warning mt-2">
+                                    <i class="bi bi-pencil-square"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+        <!-- Modal -->
+        <div class="modal fade" id="modalAgregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button 
+                        type="button" 
+                        class="btn-close" 
+                        data-bs-dismiss="modal" 
+                        aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="">
+                            <div class="mb-2">
+                                <label for="codigo" class="form-label">Codigo</label>
+                                <input type="text" class="form-control" placeholder="1234" required disabled>
+                            </div>
+                            <div class="mb-2">
+                                <label for="nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Ej: Buzo" required minlength="4" maxlength="35">
+                            </div>
+                            <div class="mb-2">
+                                <label for="precio" class="form-label">Precio</label>
+                                <input type="number" class="form-control" placeholder="Ej: 5000" required minlength="3" maxlength="5">
+                            </div>
+                            <div class="mb-2">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea id="descripcion" rows="4" class="form-control" placeholder="Lorem ipsum dolor sit amet." required minlength="30" maxlength="400"></textarea>
+                            </div>
+                            <div class="mb-2">
+                                <label for="categoria" class="form-label">Categoria</label>
+                                <select id="categoria" class="form-control" required>
+                                    <option value="">Seleccione una categoria</option>
+                                    <option value="buzo">Buzos</option>
+                                    <option value="remera">Remeras</option>
+                                    <option value="jean">Jean</option>
+                                    <option value="short">Short</option>
+                                    <option value="calzado">Calzado</option>
+                                    <option value="campera">Campera</option>
+                                </select>
+                            </div>
+                            <div class="mb-2">
+                                <label for="stock" class="form-label">Cantidad</label>
+                                <input type="number" class="form-control" placeholder="Ej: 25" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Agregar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 </body>
