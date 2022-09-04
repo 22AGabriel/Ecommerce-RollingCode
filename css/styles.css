@@ -126,9 +126,29 @@ body{
 .div-radius{
     border-radius:100%;
     border:10px solid rgb(94, 86, 86);
-    /* height: 200px; */
     width: 100%;
+    animation: circulos 2s infinite linear;
 }
+
+@keyframes circulos {
+    0%{
+        border:10px solid rgba(236, 11, 11, 0.678) ;
+    }
+    
+    25%{
+        border:10px solid rgba(157, 236, 11, 0.616) ;
+    }
+
+    50%{
+        border:10px solid rgba(11, 90, 236, 0.644) ;
+    }
+
+    100%{
+        border:10px solid rgb(8, 8, 8) ;
+    }
+}
+
+
 
 .bodySobrenosotros{
     background-color: black;
