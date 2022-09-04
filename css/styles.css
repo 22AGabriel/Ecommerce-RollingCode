@@ -121,6 +121,37 @@ body{
     height: 355px;
 }
 
+/* estilos pagina sobre nosotros */
+
+.div-radius{
+    border-radius:100%;
+    border:10px solid rgb(94, 86, 86);
+    /* height: 200px; */
+    width: 100%;
+}
+
+.bodySobrenosotros{
+    background-color: black;
+}
+
+.oficinas img{
+    height: 600px;
+}
+
+
+.card-perfil{
+    background-color:rgba(0, 0, 0, 0.973);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
 
 
 @media all and (max-width:540px){
@@ -178,8 +209,14 @@ body{
     height: 441px;
     cursor: pointer;
  }
-
+  
+ .img-cirulo{
+    display: none;
+ }
  
+ .oficinas img{
+    height: 384px;
+ }
 
 }
 
@@ -223,5 +260,9 @@ body{
      .div-hover a{
         display: none;
      }
-   
+     
+
+     .card-perfil img{
+        margin-top: 45px;
+     }
 }
