@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
     font-family:Arial, Helvetica, sans-serif;
 }
@@ -35,10 +36,13 @@ body{
     opacity: 1;
     
 }
+=======
+>>>>>>> error404
 
 
 
 
+<<<<<<< HEAD
 .div-hover{
     height: 300px;
     display: flex;
@@ -293,4 +297,8 @@ body{
      .card-perfil img{
         margin-top: 45px;
      }
+=======
+.E404{
+    height: 600px;
+>>>>>>> error404
 }
