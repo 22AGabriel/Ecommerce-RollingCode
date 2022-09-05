@@ -68,6 +68,14 @@ body{
     height: 600px;
 }
 
+.btn-busqueda{
+    height: 40px;
+}
+
+/* clase paa filtro de busqueda pagina principal */
+.filterCardP{
+    display: none;
+}
 
 /* estilos de hover a la card */
 .ocultarCard{
