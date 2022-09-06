@@ -1,5 +1,6 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
+    background-color: black;
 }
 
 
@@ -11,7 +12,7 @@ body{
 
 
 .portada-pp img{
-    height: 559px;
+    height: 459px;
     cursor: pointer;
 }
 
@@ -57,6 +58,8 @@ body{
 .card-j{
     border: transparent;
     cursor: pointer;
+    background-color: black;
+    color: white;
 }
 
 .card-j img{
@@ -72,14 +75,16 @@ body{
     height: 40px;
 }
 
-/* clase paa filtro de busqueda pagina principal */
+
+
+/* clase para filtro de busqueda pagina principal */
 .filterCardP{
     display: none;
 }
 
 /* estilos de hover a la card */
 .ocultarCard{
-    background-color: rgba(12, 11, 11, 0.548);
+    background-color: rgba(12, 11, 11, 0.664);
    bottom: 0px;
    transition: 0.5s ease;
    height:0;
@@ -94,7 +99,7 @@ body{
    align-items: center;
    flex-direction: column;
    color: white;
-   border-radius: 30px;
+   
 }
 
 
@@ -127,6 +132,11 @@ body{
 
 .arg{
     height: 355px;
+}
+
+
+.btn-busqueda{
+    width: 400px;
 }
 
 /* estilos pagina sobre nosotros */
@@ -246,6 +256,15 @@ body{
     height: 384px;
  }
 
+
+
+ .divBusqueda{
+    width: 100%;
+ }
+ 
+ .btn-busqueda{
+    width: 200px;
+ }
 }
 
 
@@ -293,4 +312,8 @@ body{
      .card-perfil img{
         margin-top: 45px;
      }
+
+     .r-dama{
+        height: 213px;
+    }
 }
