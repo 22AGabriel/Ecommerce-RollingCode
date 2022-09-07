@@ -16,11 +16,70 @@
       integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <header></header>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg justify-content-between navbar-light">
+        <form class="d-flex">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Busca una prenda"
+            aria-label="Search"
+          />
+          <button class="btn btn-outline-light" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </form>
+        <div class="nav justify-content-end-md">
+          <button
+            class="navbar-toggler colorBotonNav my-1"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <a class="navbar-brand text-light" href="#">Rolling Sporting</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active text-light"
+                  aria-current="page"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDeIngresar"
+                  role="button"
+                  >Ingresar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="#" data-bs-toggle="modal"
+                data-bs-target="#modalDeRegistrar">Registrarse</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link text-light"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDeProducto"
+                  role="button"
+                >
+                  Agregar Producto
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <main>
       <!-- seccion de menu desplegable -->
       <section>
@@ -422,8 +481,269 @@
           </div>
         </article>
       </section>
+<!--Seccion Modal -->
+      <section > 
+        <div
+          class="modal fade modalcolor"
+          id="modalDeProducto"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeProductoLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <h5 class="modal-title" id="modalDeProductoLabel">
+                  Agregar Producto
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close bg-light"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <label for="Codigo" class="form-label">Codigo</label>
+                  <input type="text" class="form-control" id="Codigo" />
+
+                  <label for="Nombre" class="form-label my-2"
+                    >Nombre del Producto</label
+                  >
+                  <input type="text" class="form-control" id="Nombre" />
+
+                  <label for="Precio" class="form-label my-2">Precio</label>
+                  <input type="text" class="form-control" id="Precio" />
+
+                  <label for="Cantidad" class="form-label my-2">Cantidad</label>
+                  <input type="text" class="form-control" id="Cantidad" />
+
+                  <label for="Descripcion" class="form-label my-2"
+                    >Descripcion</label
+                  >
+                  <textarea
+                    name=""
+                    id="Descripcion"
+                    cols="30"
+                    rows="5"
+                    class="form-control"
+                  ></textarea>
+
+                  <label for="Categorias " class="my-2">Categorias </label>
+                  <select id="Categorias" class="form-control form-select">
+                    <option value="">Seleccione una Categoria</option>
+                    <option value="remeras">Remeras</option>
+                    <option value="pantalon">Pantalon</option>
+                    <option value="calza">Calza</option>
+                  </select>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn form-control botonModal" data-bs-dismiss="modal">
+                  Agregar Producto
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Modal para iniciar seccion -->
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeIngresar"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeIngresarLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="inputPassword" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Iniciar Seccion
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Modal para registrarse -->
+
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeRegistrar"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeRegistrarLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="usuario" class="form-label"
+                    >Nombre de Usuario</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usuario"
+                    placeholder="Juan Perez"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+                  <label for="Email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="Email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="Password" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="Password"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                  <label for="ConfirmarPassword" class="form-label"
+                  >Confirmar contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="ConfirmarPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="colorMain py-4">
+      <section class="container">
+        <article class="row text-secondary">
+          <aside class="col-12 col-md-4 text-center">
+            <a href="index.html">Rolling Sporting<img
+              src=""
+              alt=""
+              width="90px"
+            /></a>
+          </aside>
+          <aside class="col-12 col-md-4 text-center">
+            <h5>Seguinos en nuestras redes</h5>
+            <div class="text-center">
+              <a href="" class="text-danger"
+                ><i class="bi bi-youtube fs-3 p-2"></i
+              ></a>
+              <a href="" class="text-primary"
+                ><i class="bi bi-facebook fs-3 p-2"></i
+              ></a>
+              <a href="" class="text-primary">
+                <i class="bi bi-twitter fs-3 p-2"></i
+              ></a>
+              <a href="" class="text-danger">
+                <i class="bi bi-instagram fs-3 p-2"></i
+              ></a>
+            </div>
+          </aside>
+          <aside class="col-12 col-md-4 text-center">
+            <h5>Link</h5>
+            <div>
+              <a href="pages/sobreNosotros.html" class="link text-decoration-none text-light"
+                >¿Quienes somos? </a
+              ><br />
+              <a href="pages/error404.html" class="link text-decoration-none text-light">Consultas</a>
+              <br />
+              <a href="pages/error404.html" class="link text-decoration-none text-light">Privacidad</a> <br />
+            </div>
+          </aside>
+        </article>
+      </section>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
