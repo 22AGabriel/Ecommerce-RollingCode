@@ -18,9 +18,8 @@
         <section class="container">
             <div class="my-5 text-center">
                 <button type="button" 
-                class="btn btn-outline-success" 
-                data-bs-toggle="modal" 
-                data-bs-target="#modalAgregarProducto"
+                class="btn btn-outline-success"
+                id="btnCrearProducto"
                 >Agregar producto</button>
             </div>
             <article class="table-responsive">
@@ -93,7 +92,7 @@
             </article>
         </section>
         <!-- Modal -->
-        <div class="modal fade" id="modalAgregarProducto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalAgregarProducto" tabindex="-1" aria-labelledby="AdminModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
@@ -105,26 +104,30 @@
                         aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="formProductos">
                             <div class="mb-2">
                                 <label for="codigo" class="form-label">Codigo</label>
-                                <input type="text" class="form-control bg-dark" placeholder="1234" required disabled>
+                                <input type="text" id="codigo" class="form-control bg-dark text-light" placeholder="1234" required disabled>
                             </div>
                             <div class="mb-2">
                                 <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control bg-dark text-light" placeholder="Ej: Buzo" required minlength="4" maxlength="35">
+                                <input type="text" id="nombre" class="form-control bg-dark text-light" placeholder="Ej: Buzo" required minlength="4" maxlength="35">
+                            </div>
+                            <div class="mb-2">
+                                <label for="imagen" class="form-label">Imagen</label>
+                                <input type="text" id="imagen" class="form-control bg-dark" placeholder="http..." required >
                             </div>
                             <div class="mb-2">
                                 <label for="precio" class="form-label">Precio</label>
-                                <input type="number" class="form-control bg-dark text-light" placeholder="Ej: 5000" required minlength="3" maxlength="5">
+                                <input type="number" id="precio" class="form-control bg-dark text-light" placeholder="Ej: 5000" required minlength="3" maxlength="5">
                             </div>
                             <div class="mb-2">
                                 <label for="description" class="form-label">Description</label>
-                                <textarea id="descripcion" rows="4" class="form-control bg-dark text-light" placeholder="Lorem ipsum dolor sit amet." required minlength="30" maxlength="400"></textarea>
+                                <textarea id="descripcion" itemid="descripcion" rows="4" class="form-control bg-dark text-light" placeholder="Lorem ipsum dolor sit amet." required minlength="30" maxlength="400"></textarea>
                             </div>
                             <div class="mb-2">
                                 <label for="categoria" class="form-label">Categoria</label>
-                                <select id="categoria" class="form-control text-white-50 bg-dark" required>
+                                <select id="categoria" itemid="categoria" class="form-control text-white-50 bg-dark" required>
                                         <option class="text-light bg-dark" value="">Seleccione una categoria</option>
                                         <option class="text-light bg-dark" value="buzo">Buzos</option>
                                         <option class="text-light bg-dark" value="remera">Remeras</option>
@@ -136,7 +139,7 @@
                             </div>
                             <div class="mb-4">
                                 <label for="stock" class="form-label">Cantidad</label>
-                                <input type="number" class="form-control bg-dark text-light" placeholder="Ej: 25" required>
+                                <input type="number" id="stock" class="form-control bg-dark text-light" placeholder="Ej: 25" required>
                             </div>
                             <button type="submit" class="btn btn-success w-100">Agregar</button>
                         </form>
@@ -147,5 +150,7 @@
     </main>
     <footer></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
+    <script src="../js/admin.js" type="module"></script>
 </body>
 </html>
