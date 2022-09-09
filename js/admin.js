@@ -1,7 +1,7 @@
 import { Producto } from "./classProducto.js";
 import {validarNombre, validarImagen, validarPrecio, validarDescripcion, validarCategoria, validarCantidad} from "./helper.js"
 
-let listaProductos = [];
+let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage')) || [];
 
 const modalFormulario = new bootstrap.Modal(document.getElementById('modalAgregarProducto'));
 const btnCrearProducto = document.getElementById('btnCrearProducto');
@@ -48,6 +48,7 @@ function agregarProducto(e){
             cantidad.value
         );
         listaProductos.push(nuevoProducto);
+        guardarProductoEnLocalStorage();
 
         limpiarFormulario();
         codigo.value = uuidv4()
@@ -62,4 +63,8 @@ function limpiarFormulario(){
     descripcion.className = 'form-control bg-dark text-light'
     categoria.className = 'form-control bg-dark text-light'
     cantidad.className = 'form-control bg-dark text-light'
+}
+
+function guardarProductoEnLocalStorage(){
+    localStorage.setItem('listaProductosStorage', JSON.stringify(listaProductos))
 }
