@@ -44,7 +44,7 @@ function crearFila(producto){
     <td>${producto.cantidad}</td>
     <td>
         <button type="button" class="btn btn-outline-danger">
-            <i class="bi bi-trash-fill"></i>
+            <i class="bi bi-trash-fill" onclick="borrarProducto('${producto.codigo}')"></i>
         </button>
         <button type="button" class="btn btn-outline-warning mt-2">
             <i class="bi bi-pencil-square"></i>
@@ -97,4 +97,21 @@ function limpiarFormulario(){
 
 function guardarProductoEnLocalStorage(){
     localStorage.setItem('listaProductosStorage', JSON.stringify(listaProductos))
+}
+
+
+// borrar Producto
+
+window.borrarProducto = function (codigo){ 
+    let listaProductosNew = listaProductos.filter((producto) =>{return producto.codigo != codigo});
+    listaProductos = listaProductosNew;
+    guardarProductoEnLocalStorage();
+    borrarTabla();
+    cargarProducto();
+    
+}
+
+function borrarTabla(){
+    let tablaProductos = document.getElementById("tablaProductos");
+    tablaProductos.innerHTML ="";
 }
