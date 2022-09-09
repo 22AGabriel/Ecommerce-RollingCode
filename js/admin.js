@@ -24,6 +24,45 @@ categoria.addEventListener('blur', () => {validarCategoria(categoria)});
 cantidad.addEventListener('blur', () => {validarCantidad(cantidad)});
 
 
+cargarProducto();
+
+
+function cargarProducto(){
+    if(listaProductos.length > 0){
+      listaProductos.forEach(producto => {crearFila(producto)});
+    }
+}
+
+
+function crearFila(producto){
+    let tablaProductos = document.getElementById("tablaProductos");
+    tablaProductos.innerHTML = `
+    <tr>
+    <td scope="row">${producto.imagen}</td>
+    <td>1234</td>
+    <td>${producto.nombre}</td>
+    <td>${producto.precio}</td>
+    <td>${Producto.descripcion}</td>
+    <td>${producto.categoria}</td>
+    <td>${producto.cantidad}</td>
+    <td>
+        <button type="button" class="btn btn-outline-danger">
+            <i class="bi bi-trash-fill"></i>
+        </button>
+        <button type="button" class="btn btn-outline-warning mt-2">
+            <i class="bi bi-pencil-square"></i>
+        </button>
+    </td>
+ </tr>
+    
+    
+    `
+}
+
+
+
+
+
 function mostrarFormulario(){
     modalFormulario.show();
     codigo.value = uuidv4();
