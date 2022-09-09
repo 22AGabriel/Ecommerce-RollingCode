@@ -16,12 +16,12 @@ let cantidad = document.getElementById('stock');
 
 btnCrearProducto.addEventListener('click', mostrarFormulario);
 formulario.addEventListener('submit', agregarProducto);
-nombre.addEventListener("blur", () => {validarNombre(nombre)});
-imagen.addEventListener("blur", () => {validarImagen(imagen)});
-precio.addEventListener("blur", () => {validarPrecio(precio)});
-descripcion.addEventListener("blur", () => {validarDescripcion(descripcion)});
-categoria.addEventListener("blur", () => {validarCategoria(categoria)});
-cantidad.addEventListener("blur", () => {validarCantidad(cantidad)});
+nombre.addEventListener('blur', () => {validarNombre(nombre)});
+imagen.addEventListener('blur', () => {validarImagen(imagen)});
+precio.addEventListener('blur', () => {validarPrecio(precio)});
+descripcion.addEventListener('blur', () => {validarDescripcion(descripcion)});
+categoria.addEventListener('blur', () => {validarCategoria(categoria)});
+cantidad.addEventListener('blur', () => {validarCantidad(cantidad)});
 
 
 function mostrarFormulario(){
@@ -48,7 +48,18 @@ function agregarProducto(e){
             cantidad.value
         );
         listaProductos.push(nuevoProducto);
-        console.log(listaProductos)
-    }
 
+        limpiarFormulario();
+        codigo.value = uuidv4()
+    }
+}
+
+function limpiarFormulario(){
+    formulario.reset()
+    nombre.className = 'form-control bg-dark text-light'
+    imagen.className = 'form-control bg-dark text-light'
+    precio.className = 'form-control bg-dark text-light'
+    descripcion.className = 'form-control bg-dark text-light'
+    categoria.className = 'form-control bg-dark text-light'
+    cantidad.className = 'form-control bg-dark text-light'
 }
