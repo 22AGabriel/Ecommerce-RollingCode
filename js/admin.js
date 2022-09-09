@@ -38,7 +38,7 @@ function crearFila(producto){
     let tablaProductos = document.getElementById("tablaProductos");
     tablaProductos.innerHTML += `
     <tr>
-    <td scope="row"><img class="w-100" src="${producto.imagen}" alt="..."></td>
+    <td scope="row"><img class="w-100" src="${producto.imagen}" alt="${producto.nombre}"></td>
     <td>${producto.codigo}</td>
     <td>${producto.nombre}</td>
     <td>${producto.precio}</td>
