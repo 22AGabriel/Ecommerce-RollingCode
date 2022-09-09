@@ -23,16 +23,13 @@ descripcion.addEventListener('blur', () => {validarDescripcion(descripcion)});
 categoria.addEventListener('blur', () => {validarCategoria(categoria)});
 cantidad.addEventListener('blur', () => {validarCantidad(cantidad)});
 
-
 cargarProducto();
-
 
 function cargarProducto(){
     if(listaProductos.length > 0){
       listaProductos.forEach(producto => {crearFila(producto)});
     }
 }
-
 
 function crearFila(producto){
     let tablaProductos = document.getElementById("tablaProductos");
@@ -53,15 +50,8 @@ function crearFila(producto){
             <i class="bi bi-pencil-square"></i>
         </button>
     </td>
- </tr>
-    
-    
-    `
+ </tr>`
 }
-
-
-
-
 
 function mostrarFormulario(){
     modalFormulario.show();
@@ -92,7 +82,6 @@ function agregarProducto(e){
         limpiarFormulario();
         codigo.value = uuidv4();
         crearFila(nuevoProducto);
-        modalFormulario.hide();
     }
 }
 
