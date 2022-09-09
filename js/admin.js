@@ -82,6 +82,7 @@ function agregarProducto(e){
         limpiarFormulario();
         codigo.value = uuidv4();
         crearFila(nuevoProducto);
+        modalFormulario.hide();
     }
 }
 
@@ -103,11 +104,30 @@ function guardarProductoEnLocalStorage(){
 // borrar Producto
 
 window.borrarProducto = function (codigo){ 
-    let listaProductosNew = listaProductos.filter((producto) =>{return producto.codigo != codigo});
-    listaProductos = listaProductosNew;
-    guardarProductoEnLocalStorage();
-    borrarTabla();
-    cargarProducto();
+    Swal.fire({
+        title: 'Eliminar Producto',
+        text: "Estas seguro que quiere eliminar el producto?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Borrar',
+        CancelButtonText: 'Cancelar'
+      }).then((result) => {
+        if (result.isConfirmed){
+            let listaProductosNew = listaProductos.filter((producto) =>{return producto.codigo != codigo});
+            listaProductos = listaProductosNew;
+            guardarProductoEnLocalStorage();
+            borrarTabla();
+            cargarProducto();
+
+          Swal.fire(
+            'Deleted!',
+            'Your file has been deleted.',
+            'success'
+          )
+        }
+      })
     
 }
 
