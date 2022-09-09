@@ -36,13 +36,13 @@ function cargarProducto(){
 
 function crearFila(producto){
     let tablaProductos = document.getElementById("tablaProductos");
-    tablaProductos.innerHTML = `
+    tablaProductos.innerHTML += `
     <tr>
-    <td scope="row">${producto.imagen}</td>
-    <td>1234</td>
+    <td scope="row"><img class="w-100" src="${producto.imagen}" alt="..."></td>
+    <td>${producto.codigo}</td>
     <td>${producto.nombre}</td>
     <td>${producto.precio}</td>
-    <td>${Producto.descripcion}</td>
+    <td>${producto.descripcion}</td>
     <td>${producto.categoria}</td>
     <td>${producto.cantidad}</td>
     <td>
@@ -90,7 +90,9 @@ function agregarProducto(e){
         guardarProductoEnLocalStorage();
 
         limpiarFormulario();
-        codigo.value = uuidv4()
+        codigo.value = uuidv4();
+        crearFila(nuevoProducto);
+        modalFormulario.hide();
     }
 }
 
