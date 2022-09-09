@@ -33,7 +33,8 @@ export function validarPrecio(input){
 }
 
 export function validarDescripcion(input){
-    if(input.value.length <= 200 && input.value.length >= 30){
+ 
+    if(input.value.trim().length <= 200 && input.value.trim().length >= 30){
         input.className = 'form-control bg-dark text-light is-valid';
         return true;
     }else{

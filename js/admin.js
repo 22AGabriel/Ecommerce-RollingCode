@@ -23,6 +23,35 @@ descripcion.addEventListener('blur', () => {validarDescripcion(descripcion)});
 categoria.addEventListener('blur', () => {validarCategoria(categoria)});
 cantidad.addEventListener('blur', () => {validarCantidad(cantidad)});
 
+cargarProducto();
+
+function cargarProducto(){
+    if(listaProductos.length > 0){
+      listaProductos.forEach(producto => {crearFila(producto)});
+    }
+}
+
+function crearFila(producto){
+    let tablaProductos = document.getElementById("tablaProductos");
+    tablaProductos.innerHTML += `
+    <tr>
+    <td scope="row"><img class="w-100" src="${producto.imagen}" alt="${producto.nombre}"></td>
+    <td>${producto.codigo}</td>
+    <td>${producto.nombre}</td>
+    <td>${producto.precio}</td>
+    <td>${producto.descripcion}</td>
+    <td>${producto.categoria}</td>
+    <td>${producto.cantidad}</td>
+    <td>
+        <button type="button" class="btn btn-outline-danger">
+            <i class="bi bi-trash-fill"></i>
+        </button>
+        <button type="button" class="btn btn-outline-warning mt-2">
+            <i class="bi bi-pencil-square"></i>
+        </button>
+    </td>
+ </tr>`
+}
 
 function mostrarFormulario(){
     modalFormulario.show();
@@ -51,7 +80,8 @@ function agregarProducto(e){
         guardarProductoEnLocalStorage();
 
         limpiarFormulario();
-        codigo.value = uuidv4()
+        codigo.value = uuidv4();
+        crearFila(nuevoProducto);
     }
 }
 
