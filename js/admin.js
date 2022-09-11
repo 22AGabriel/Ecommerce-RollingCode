@@ -43,10 +43,10 @@ function crearFila(producto){
     <td>${producto.categoria}</td>
     <td>${producto.cantidad}</td>
     <td>
-        <button type="button" class="btn btn-outline-danger">
-            <i class="bi bi-trash-fill" onclick="borrarProducto('${producto.codigo}')"></i>
+        <button type="button" class="btn btn-outline-danger" onclick="borrarProducto('${producto.codigo}')">
+            <i class="bi bi-trash-fill"></i>
         </button>
-        <button type="button" class="btn btn-outline-warning mt-2">
+        <button type="button" class="btn btn-outline-warning mt-2" onclick="editarProducto('${(producto.codigo)}')">
             <i class="bi bi-pencil-square"></i>
         </button>
     </td>
@@ -134,4 +134,17 @@ window.borrarProducto = function (codigo){
 function borrarTabla(){
     let tablaProductos = document.getElementById("tablaProductos");
     tablaProductos.innerHTML ="";
+}
+
+window.editarProducto = function (buscarCodigo){
+    // buscar el en el arreglo el producto seleccionado
+ let buscarProducto = listaProductos.find((producto)=> producto.codigo === buscarCodigo);
+ codigo.value = buscarProducto.codigo;
+ nombre.value = buscarProducto.nombre;
+ imagen.value = buscarProducto.imagen;
+ precio.value = buscarProducto.precio;
+ descripcion.value = buscarProducto.descripcion;
+ categoria.value = buscarProducto.categoria;
+ cantidad.value = buscarProducto.cantidad;
+ modalFormulario.show();
 }
