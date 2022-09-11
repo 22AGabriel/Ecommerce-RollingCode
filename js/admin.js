@@ -57,6 +57,7 @@ function crearFila(producto){
 
 function mostrarFormulario(){
     productoNuevo = true;
+    limpiarFormulario();
     modalFormulario.show();
     codigo.value = uuidv4();
 }
@@ -135,8 +136,8 @@ window.borrarProducto = function (codigo){
             cargarProducto();
 
           Swal.fire(
-            'Deleted!',
-            'Your file has been deleted.',
+            'Producto eliminado',
+            'El producto se borro correctamente',
             'success'
           )
         }
@@ -151,6 +152,7 @@ function borrarTabla(){
 
 window.editarProducto = function (buscarCodigo){
     productoNuevo = false;
+    limpiarFormulario();
     // buscar el en el arreglo el producto seleccionado
  let buscarProducto = listaProductos.find((producto)=> producto.codigo === buscarCodigo);
  codigo.value = buscarProducto.codigo;
@@ -187,4 +189,11 @@ function actualizarProducto(){
 
     // cerrar venana modal
     modalFormulario.hide();
+    limpiarFormulario();
+    //indicar al usuario qe se modifico el producto
+    Swal.fire(
+        'Producto ,Modificado',
+        'El producto seleccionado fue correctamente modificado',
+        'success'
+      )
 }
