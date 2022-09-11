@@ -21,59 +21,58 @@
     <title>Document</title>
   </head>
   <body class="bodySobrenosotros">
-    <header class="container-fluid">
-      <nav class="navbar navbar-expand-lg justify-content-between navbar-light">
-        <form class="d-flex">
-          <input
-            class="form-control me-2"
-            type="search"
-            placeholder="Busca una prenda"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-light" type="submit">
-            <i class="bi bi-search"></i>
-          </button>
-        </form>
-        <div class="nav justify-content-end-md">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-around">
+        <div class="container">
+          <img
+              src="../img/logoRollingSporting.jpg"
+              alt="logo de Rolling Sporting"
+              width="50px"
+              class="me-3"
+            />
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Busca una prenda"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-light" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
           <button
-            class="navbar-toggler colorBotonNav my-1"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
+            data-bs-target="#nav"
+            aria-controls="nav"
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <a class="navbar-brand text-light" href="../index.html">Rolling Sporting</a>
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-lg-auto me-auto me-lg-0 mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  >Rolling Sporting</a
+                >
+              </li>
               <li class="nav-item">
                 <a
-                  class="nav-link active text-light"
-                  aria-current="page"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalDeIngresar"
-                  role="button"
-                  >Ingresar</a
-                >
+                    class="nav-link active text-light"
+                    aria-current="page"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalDeIngresar"
+                    role="button"
+                    >Ingresar</a
+                  >
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#" data-bs-toggle="modal"
-                data-bs-target="#modalDeRegistrar">Registrarse</a>
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#modalDeProducto"
-                  role="button"
-                >
-                  Agregar Producto
-                </a>
+                  data-bs-target="#modalDeRegistrar">Registrarse</a>
               </li>
             </ul>
           </div>
@@ -194,74 +193,6 @@
         </article>
       </section>
       <!--Seccion Modal -->
-      <section > 
-        <div
-          class="modal fade modalcolor"
-          id="modalDeProducto"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="modalDeProductoLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content modalcolor">
-              <div class="modal-header">
-                <h5 class="modal-title" id="modalDeProductoLabel">
-                  Agregar Producto
-                </h5>
-                <button
-                  type="button"
-                  class="btn-close bg-light"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <form>
-                  <label for="Codigo" class="form-label">Codigo</label>
-                  <input type="text" class="form-control" id="Codigo" />
-
-                  <label for="Nombre" class="form-label my-2"
-                    >Nombre del Producto</label
-                  >
-                  <input type="text" class="form-control" id="Nombre" />
-
-                  <label for="Precio" class="form-label my-2">Precio</label>
-                  <input type="text" class="form-control" id="Precio" />
-
-                  <label for="Cantidad" class="form-label my-2">Cantidad</label>
-                  <input type="text" class="form-control" id="Cantidad" />
-
-                  <label for="Descripcion" class="form-label my-2"
-                    >Descripcion</label
-                  >
-                  <textarea
-                    name=""
-                    id="Descripcion"
-                    cols="30"
-                    rows="5"
-                    class="form-control"
-                  ></textarea>
-
-                  <label for="Categorias " class="my-2">Categorias </label>
-                  <select id="Categorias" class="form-control form-select">
-                    <option value="">Seleccione una Categoria</option>
-                    <option value="remeras">Remeras</option>
-                    <option value="pantalon">Pantalon</option>
-                    <option value="calza">Calza</option>
-                  </select>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn form-control botonModal" data-bs-dismiss="modal">
-                  Agregar Producto
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 <!-- Modal para iniciar seccion -->
       <section>
         <div
