@@ -14,7 +14,7 @@ function crearProducto(producto){
     <img
       src="${producto.imagen}"
       class="card-img-top"
-      alt="${producto.nombre}"
+      alt="${producto.nombre}${producto.categoria}"
     />
     <div class="card-body">
       <h5 class="card-title">${producto.nombre}<span class="badge text-bg-success">Nuevo</span></h5>
@@ -23,7 +23,7 @@ function crearProducto(producto){
     <div class="card-body ocultarCard">
       <h5 class="card-title  display-6">Rolling</h5>
       <h6 class="card-title  display-6 mb-5">Sporting</h6>
-      <a href="#" class="btn btn-success mb-5">ver detalle</a>
+      <button class="btn btn-success mb-5" onclick="verPaginaDetalle('${producto.codigo}')">ver detalle</button>
     </div>
   </div>
     
@@ -33,3 +33,8 @@ function crearProducto(producto){
 
 
 cargarProducto();
+
+function verPaginaDetalle(codigoProducto){
+    console.log(codigoProducto);
+    window.location.href = window.location.origin + '/pages/paginaDetalle.html?codigo='+ codigoProducto;
+}
