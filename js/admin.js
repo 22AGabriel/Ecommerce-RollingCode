@@ -13,6 +13,8 @@ let precio = document.getElementById('precio');
 let descripcion = document.getElementById('descripcion');
 let categoria = document.getElementById('categoria');
 let cantidad = document.getElementById('stock');
+// variable para determinar si agregamos producto o editamos el producto
+let productoNuevo = true // producto  nueva = true quiero crear un producto  caso contrario quiero editar  
 
 btnCrearProducto.addEventListener('click', mostrarFormulario);
 formulario.addEventListener('submit', agregarProducto);
@@ -54,6 +56,7 @@ function crearFila(producto){
 }
 
 function mostrarFormulario(){
+    productoNuevo = true;
     modalFormulario.show();
     codigo.value = uuidv4();
 }
@@ -66,25 +69,35 @@ function agregarProducto(e){
     validarDescripcion(descripcion) && 
     validarCategoria(categoria) &&
     validarCantidad(cantidad)){
-
-        let nuevoProducto = new Producto(
-            codigo.value, 
-            nombre.value,
-            imagen.value,
-            precio.value,
-            descripcion.value,
-            categoria.value,
-            cantidad.value
-        );
-        listaProductos.push(nuevoProducto);
-        guardarProductoEnLocalStorage();
-
-        limpiarFormulario();
-        codigo.value = uuidv4();
-        crearFila(nuevoProducto);
-        modalFormulario.hide();
+       if(productoNuevo === true){
+          crearProductoNuevo();
+       }else{
+         actualizarProducto();
+       }
     }
 }
+
+function crearProductoNuevo(){
+    let nuevoProducto = new Producto(
+        codigo.value, 
+        nombre.value,
+        imagen.value,
+        precio.value,
+        descripcion.value,
+        categoria.value,
+        cantidad.value
+    );
+    listaProductos.push(nuevoProducto);
+    guardarProductoEnLocalStorage();
+
+    limpiarFormulario();
+    codigo.value = uuidv4();
+    crearFila(nuevoProducto);
+    modalFormulario.hide();
+}
+
+
+
 
 function limpiarFormulario(){
     formulario.reset()
@@ -137,6 +150,7 @@ function borrarTabla(){
 }
 
 window.editarProducto = function (buscarCodigo){
+    productoNuevo = false;
     // buscar el en el arreglo el producto seleccionado
  let buscarProducto = listaProductos.find((producto)=> producto.codigo === buscarCodigo);
  codigo.value = buscarProducto.codigo;
@@ -147,4 +161,30 @@ window.editarProducto = function (buscarCodigo){
  categoria.value = buscarProducto.categoria;
  cantidad.value = buscarProducto.cantidad;
  modalFormulario.show();
+}
+
+
+function actualizarProducto(){
+   
+    // buscar la posicion del producto que quiero editar
+       let posicionProductoEditar = listaProductos.findIndex((producto)=>producto.codigo === codigo.value)
+     
+    // actualizar los datos del producto que se esta editando
+     listaProductos[posicionProductoEditar].nombre = nombre.value;
+     listaProductos[posicionProductoEditar].imagen = imagen.value;
+     listaProductos[posicionProductoEditar].precio = precio.value;
+     listaProductos[posicionProductoEditar].descripcion = descripcion.value;
+     listaProductos[posicionProductoEditar].categoria = categoria.value;
+     listaProductos[posicionProductoEditar].cantidad = cantidad.value;
+
+    //actualizar el localstorage
+
+    guardarProductoEnLocalStorage();
+
+    //actualizar la tabla
+    borrarTabla();
+    cargarProducto();
+
+    // cerrar venana modal
+    modalFormulario.hide();
 }
