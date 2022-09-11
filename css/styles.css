@@ -169,6 +169,18 @@ body{
     color: white;
 }
 
+
+
+
+
+/* estilos apgina detalle */
+.borderDetalle{
+    border: transparent;
+}
+
+
+
+
 @media all and (max-width:540px){
   #carouselExampleIndicators{
     display: none;
