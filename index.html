@@ -44,7 +44,7 @@
             </form>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <button class="btn btn-outline-dark mt-2 mb-2 me-2">Iniciar Sesion</button>
+                <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesion">Iniciar Sesion</button>
               </li>
               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2">Registrarse</button>
@@ -392,6 +392,30 @@
           </div>
         </article>
       </section>
+      <!-- Modal Inicio Sesion-->
+      <div class="modal fade" id="modalInicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-2">
+                  <label for="usuario" class="form-label">Email o nombre de usuario</label>
+                  <input type="text" id="usuario" class="form-control bg-dark" required>
+                </div>
+                <div class="mb-2">
+                  <label for="contrasenia" class="form-label">Contraseña</label>
+                  <input type="password" id="contrasenia" class="form-control bg-dark" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <section class="bg-success">
