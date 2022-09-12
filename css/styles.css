@@ -161,6 +161,7 @@ body{
 
 .oficinas img{
     height: 600px;
+    /* object-fit: cover; */
 }
 
 .card-perfil{
@@ -239,7 +240,7 @@ body{
  }
  
  .oficinas img{
-    height: 384px;
+    height: 284px;
  }
 
  .divBusqueda{
@@ -300,4 +301,9 @@ body{
     .ver{
         display: initial;
     }
+
+    .oficinas img{
+        height: 500px;
+     }
+    
 }
