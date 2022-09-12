@@ -44,17 +44,10 @@
             </form>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-<<<<<<< HEAD
-                <button class="btn btn-dark mt-2 mb-2 me-2">Iniciar Sesion</button>
-              </li>
-              <li class="nav-item">
-                <button class="btn btn-dark mt-2 mb-2">Registrarse</button>
-=======
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesionIndex">Iniciar Sesión</button>
               </li>
               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalRegistrarse">Registrarse</button>
->>>>>>> cdd0702ce3ebbceff55e28c147994e32d882e7e2
               </li>
             </ul>
           </div>
@@ -155,6 +148,7 @@
         <h3 class="display-4 text-center text-light">Indumentaria</h3>
         <div class="text-center d-flex justify-content-center divBusqueda">
           <input type="search" placeholder="Buscar" class="form-control  btn-busqueda mt-3 inputFilterCard" >
+          <button class="btn btn-success m" data-bs-toggle="modal" data-bs-target="#modal-carrito"><i class="bi bi-cart-plus-fill"></i></button>>
         </div>
         <article class="row text-center mt-5" id="grilla">
           
@@ -451,6 +445,33 @@
                 </div>
                 <button type="submit" class="btn btn-success w-100">Registrarse</button>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- modal carrito -->
+      <div class="modal" tabindex="-1" id="modal-carrito">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header text-center">
+              <h5 class="modal-title text-center">Productos agregador al carrito</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body row" id="tabla-carrito">
+              <!-- <div class="col-12 col-md-6">
+                <img src="./img/camperaPuma2.jpg" alt="" class="w-100">
+              </div>
+              <div class="col-12 col-md-6">
+                <h5>campera</h5>
+                <p>precio</p>
+                <button class="btn btn-success">Cancelar</button>
+              </div> -->
+            </article>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
