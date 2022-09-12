@@ -25,42 +25,74 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg modalcolor">
+      <nav class="navbar navbar-expand-lg navbar-dark modalcolor">
         <div class="container">
           <form class="d-flex mx-1">
-            <input class="form-control me-2 p-sm-0" type="search" aria-label="Search">
-            <button class="btn btn-outline botonModal" type="submit"><i class="bi bi-search"></i></button>
+            <input
+              class="form-control me-2 p-sm-0"
+              type="search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline botonModal" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
           </form>
-          <button class="navbar-toggler botonModal" type="button" data-bs-toggle="collapse" data-bs-target="#navbardeRollingSporting" aria-controls="navbardeRollingSporting" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#nav"
+            aria-controls="nav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
-          </button> 
-          <div id="navbardeRollingSporting">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-justified">
+          </button>
+          <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-lg-auto me-auto me-lg-0 mb-2 mb-lg-0">
               <li class="nav-item">
-                <img src="./img/logoRollingSporting.jpg" width="50px" class="imgLogo" alt="">
-              </li>
-              <li class="nav-item">
-                <a class="navbar-brand nav-link active fs-4 titulo text-light" aria-current="page" href="#">Rolling Sporting</a>
-              </li>
-              <li class="nav-item">
-                <a
-                    class="nav-link active fs-5 text-light titulo"
-                    aria-current="page"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalDeIngresar"
-                    role="button"
-                    >Ingresar</a
-                  >
+                <a class="nav-link active" aria-current="page" href="index.html"
+                  ><img
+                    src="./img/logoRollingSporting.jpg"
+                    width="50px"
+                    class="imgLogo imgFooter"
+                    alt="logo de Rolling Sporting"
+                /></a>
               </li>
               <li class="nav-item">
                 <a
-                    class="nav-link fs-5 text-light titulo"
-                    href="#"
-                    data-bs-toggle="modal"
-                    data-bs-target="#modalDeRegistrar"
-                    >Registrarse</a
-                  >
+                  class="navbar-brand nav-link active fs-4 titulo text-light"
+                  aria-current="page"
+                  href="#"
+                  >Rolling Sporting</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link active fs-5 text-light titulo"
+                  aria-current="page"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDeIngresar"
+                  role="button"
+                  >Ingresar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-5 text-light titulo"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDeRegistrar"
+                  >Registrarse</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link fs-5 text-light titulo"
+                  href="./pages/admin.html"
+                  >Administrar</a
+                >
               </li>
             </ul>
           </div>
@@ -660,7 +692,7 @@
         </div>
       </section>
     </main>
-    <footer class="colorMain py-4">
+    <footer class="modalcolor py-4">
       <section class="container">
         <article class="row text-secondary">
           <aside class="col-12 col-md-4 text-center">
@@ -672,39 +704,39 @@
             /></a>
           </aside>
           <aside class="col-12 col-md-4 text-center">
-            <h5>Seguinos en nuestras redes</h5>
+            <h5 class="text-dark">Seguinos en nuestras redes</h5>
             <div class="text-center">
-              <a href="" class="text-danger"
+              <a href="./pages/error404.html" class="text-danger"
                 ><i class="bi bi-youtube fs-3 p-2"></i
               ></a>
-              <a href="" class="text-primary"
+              <a href="./pages/error404.html" class="text-primary"
                 ><i class="bi bi-facebook fs-3 p-2"></i
               ></a>
-              <a href="" class="text-primary">
+              <a href="./pages/error404.html" class="text-primary">
                 <i class="bi bi-twitter fs-3 p-2"></i
               ></a>
-              <a href="" class="text-danger">
+              <a href="./pages/error404.html" class="text-danger">
                 <i class="bi bi-instagram fs-3 p-2"></i
               ></a>
             </div>
           </aside>
           <aside class="col-12 col-md-4 text-center">
-            <h5>Link</h5>
+            <h5 class="text-dark">Link</h5>
             <div>
               <a
                 href="pages/sobreNosotros.html"
-                class="link text-decoration-none text-light"
+                class="link text-decoration-none text-light titulo"
                 >¿Quienes somos? </a
               ><br />
               <a
                 href="pages/error404.html"
-                class="link text-decoration-none text-light"
+                class="link text-decoration-none text-light titulo"
                 >Consultas</a
               >
               <br />
               <a
                 href="pages/error404.html"
-                class="link text-decoration-none text-light"
+                class="link text-decoration-none text-light titulo"
                 >Privacidad</a
               >
               <br />

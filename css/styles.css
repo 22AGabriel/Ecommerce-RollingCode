@@ -191,7 +191,6 @@ header{
 .modalcolor{
     background-color: rgba(0, 0, 0, 0.303);
     color: white;
-    text-align: center;
 }
 .botonModal{
     background-color: black;
