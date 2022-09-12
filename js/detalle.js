@@ -2,6 +2,7 @@
 // traer el parametro desde la url
 
 const urlParametro = new URLSearchParams(window.location.search);
+let carrito =[];
 
 // buscar el producto en el arreglo
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage'))||[];
@@ -20,6 +21,7 @@ articuloDetalle.innerHTML = `
       <p class="card-text">${producto.descripcion}</p>
       <p class="card-text">Precio: $ ${producto.precio}</p>
       <p class="card-text"><small class="text-muted">Categoria :${producto.categoria}</small></p>
+      <button class="btn btn-success" onclick="agregarCarrito('${producto.codigo}')"><i class="bi bi-cart-plus-fill"></i> agregar al carrito</button>
     </div>
   </div>
 </div>
@@ -28,3 +30,10 @@ articuloDetalle.innerHTML = `
 
 `
 
+// agregar al carrito los productos
+function agregarCarrito(carritoCod){
+  let carritoItems = listaProductos.find((productos)=>productos.codigo === carritoCod);
+  carrito.push(carritoItems);
+}
+
+console.log(carrito);

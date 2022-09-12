@@ -20,7 +20,7 @@ body{
    transition: 1s ease;
    height:0;
    left: 0;
-   top: 0;
+   top: 70px;
    overflow: hidden;
    position: absolute;
    width: 54px;
