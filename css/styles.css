@@ -68,6 +68,12 @@ body{
     height: 40px;
 }
 
+header{
+    position: relative;
+    z-index: 1; 
+}
+
+
 /* clase para filtro de busqueda pagina principal */
 .filterCardP{
     display: none;
