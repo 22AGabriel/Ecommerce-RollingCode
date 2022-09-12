@@ -57,6 +57,160 @@
             </div>
         </article>
        </section>
+       <!--Seccion Modal -->
+      
+<!-- Modal para iniciar seccion -->
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeIngresar1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeIngresar1Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="inputPassword" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Iniciar Seccion
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Modal para registrarse -->
+
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeRegistrar"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeRegistrarLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="usuario" class="form-label"
+                    >Nombre de Usuario</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usuario"
+                    placeholder="Juan Perez"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+                  <label for="Email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="Email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="Password" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="Password"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                  <label for="ConfirmarPassword" class="form-label"
+                  >Confirmar contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="ConfirmarPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer>
         <section class="bg-success">
