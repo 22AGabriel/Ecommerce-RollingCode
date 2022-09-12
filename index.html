@@ -44,10 +44,10 @@
             </form>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesion">Iniciar Sesion</button>
+                <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesionIndex">Iniciar Sesión</button>
               </li>
               <li class="nav-item">
-                <button class="btn btn-outline-dark mt-2 mb-2">Registrarse</button>
+                <button class="btn btn-outline-dark mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalRegistrarse">Registrarse</button>
               </li>
             </ul>
           </div>
@@ -393,24 +393,56 @@
         </article>
       </section>
       <!-- Modal Inicio Sesion-->
-      <div class="modal fade" id="modalInicioSesion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal fade" id="modalInicioSesionIndex" tabindex="-1" aria-labelledby="inicioSesionModalIndex" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content bg-dark text-white">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Iniciar Sesión</h5>
+              <h5 class="modal-title" id="inicioSesionModalIndex">Iniciar Sesión</h5>
               <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <form>
                 <div class="mb-2">
                   <label for="usuario" class="form-label">Email o nombre de usuario</label>
-                  <input type="text" id="usuario" class="form-control bg-dark" required>
+                  <input type="text" id="usuario" class="form-control bg-dark text-light" required>
                 </div>
                 <div class="mb-2">
                   <label for="contrasenia" class="form-label">Contraseña</label>
-                  <input type="password" id="contrasenia" class="form-control bg-dark" required>
+                  <input type="password" id="contrasenia" class="form-control bg-dark text-light" required>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal Registrarse-->
+      <div class="modal fade" id="modalRegistrarse" tabindex="-1" aria-labelledby="registroModalIndex" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="registroModalIndex">Iniciar Sesión</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-2">
+                  <label for="Nombreusuario" class="form-label">Nombre de usuario</label>
+                  <input type="text" id="Nombreusuario" class="form-control bg-dark text-light" required minlength="5" maxlength="20">
+                </div>
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control bg-dark text-light" required>
+                </div>
+                <div class="mb-2">
+                  <label for="contraseniaRegistro" class="form-label">Contraseña</label>
+                  <input type="password" id="contraseniaRegistro" class="form-control bg-dark text-light" required minlength="8">
+                </div>
+                <div class="mb-2">
+                  <label for="contraseniaConfirmar" class="form-label">Confirmar contraseña</label>
+                  <input type="password" id="contraseniaConfirmar" class="form-control bg-dark text-light" required minlength="8">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Registrarse</button>
               </form>
             </div>
           </div>
