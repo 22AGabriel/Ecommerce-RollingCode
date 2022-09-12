@@ -1,7 +1,5 @@
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage')) || [];
 let grilla = document.getElementById("grilla");
-let carrito =[];
-let itemproducto = document.getElementById("tablaCarrito");
 
 function cargarProducto(){
     if(listaProductos.length > 0){
@@ -44,35 +42,6 @@ function verPaginaDetalle(codigoProducto){
 
 
 
-
 // agregar al carrito los productos
 
 
-
-
-
-
-
-
-function agregarCarrito(carritoCod){
-  let carritoItems = listaProductos.find((productos)=>productos.codigo === carritoCod);
-  carrito.push(carritoItems);
-  actualizarCarrito();
-  console.log(carrito)
-}
-
-
-function actualizarCarrito(){
-  carrito.forEach((producto)=>{
-    itemproducto.innerHTML = `
-    <div class="col-12 col-md-6">
-      <img src="${producto.codigo}" alt="" class="w-100">
-    </div>
-    <div class="col-12 col-md-6">
-      <h5>campera</h5>
-      <p>precio</p>
-      <button class="btn btn-success">Cancelar</button>
-    </div>
-    `
-  })
-}
