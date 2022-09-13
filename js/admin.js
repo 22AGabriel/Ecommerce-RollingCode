@@ -253,13 +253,3 @@ function borrarTablaUsuarios(){
     tablaUsuarios.innerHTML = "";
 }
 
-// GENERADOR DE USUARIO ADMINISTRADOR
-
-/* 
-let administrador = new Usuario("Gabriel","gabrielazubel63t@gmail.com", 12345678)
-
-administrador.administrador = true
-
-listaUsuarios.push(administrador)
-guardarUsuarioEnLocalStorage() 
-*/

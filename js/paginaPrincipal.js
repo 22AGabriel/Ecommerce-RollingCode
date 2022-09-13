@@ -1,5 +1,9 @@
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage')) || [];
-let grilla = document.getElementById("grilla")
+let grilla = document.getElementById("grilla");
+let modalCarrito = new bootstrap.Modal(document.getElementById('modal-carrito'));
+let botonCarrito =document.querySelector(".carrito")
+botonCarrito.addEventListener("click",mostrarModalCarrito)
+
 
 function cargarProducto(){
     if(listaProductos.length > 0){
@@ -17,17 +21,18 @@ function crearProducto(producto){
       alt="${producto.nombre}${producto.categoria}"
     />
     <div class="card-body">
-      <h5 class="card-title">${producto.nombre}<span class="badge text-bg-success">Nuevo</span></h5>
+      <h5 class="card-title">${producto.nombre}</h5>
       <p><span>$${producto.precio}</span></p>
     </div>
     <div class="card-body ocultarCard">
       <h5 class="card-title  display-6">Rolling</h5>
-      <h6 class="card-title  display-6 mb-5">Sporting</h6>
-      <button class="btn btn-success mb-5" onclick="verPaginaDetalle('${producto.codigo}')">ver detalle</button>
+      <h6 class="card-title  display-6 mb-1">Sporting</h6>
+      <div>
+      <button class="btn btn-success" onclick="verPaginaDetalle('${producto.codigo}')">ver detalle</button>
+      <button class="btn btn-warning ms-1" onclick="agregarCarrito('${producto.codigo}')"><i class="bi bi-cart4"></i></button>
+      </div>
     </div>
-  </div>
-    
-    
+    </div> 
     `
 }
 
@@ -37,4 +42,11 @@ cargarProducto();
 function verPaginaDetalle(codigoProducto){
     console.log(codigoProducto);
     window.location.href = window.location.origin + '/pages/paginaDetalle.html?codigo='+ codigoProducto;
+}
+
+
+
+
+function mostrarModalCarrito(){
+    modalCarrito.show()
 }
