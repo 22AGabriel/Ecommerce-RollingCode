@@ -1,6 +1,5 @@
 
 // traer el parametro desde la url
-
 const urlParametro = new URLSearchParams(window.location.search);
 
 
@@ -30,27 +29,3 @@ articuloDetalle.innerHTML = `
 
 `
 
-// // agregar al carrito los productos
-// function agregarCarrito(carritoCod){
-//   let carritoItems = listaProductos.find((productos)=>productos.codigo === carritoCod);
-//   carrito.push(carritoItems);
-// }
-
-// let dibujarCarrito = getElementById("tablaCarrito");
-// dibujarCarrito.innerHTML = `
-// <tr>
-// <td><img src="${producto.imagen}" alt="" class="w-100"></td>
-// <td>conjunto</td>
-// <td>$20,000</td>
-// <td>
-//     <button type="button" class="btn btn-outline-danger" onclick="borrarProducto('${producto.codigo}')">
-//         <i class="bi bi-trash-fill"></i>
-//     </button>
-//     <button type="button" class="btn btn-outline-warning mt-2" onclick="editarProducto('${(producto.codigo)}')">
-//         <i class="bi bi-pencil-square"></i>
-//     </button>
-// </td>
-// </tr>
-
-
-// `
