@@ -47,7 +47,7 @@
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesionIndex">Iniciar Sesión</button>
               </li>
               <li class="nav-item">
-                <button class="btn btn-outline-dark mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#modalRegistrarse">Registrarse</button>
+                <button class="btn btn-outline-dark mt-2 mb-2" id="btnRegistrarse">Registrarse</button>
               </li>
             </ul>
           </div>
@@ -449,10 +449,10 @@
               <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form>
+              <form id="btnRegistrar">
                 <div class="mb-2">
-                  <label for="Nombreusuario" class="form-label">Nombre de usuario</label>
-                  <input type="text" id="Nombreusuario" class="form-control bg-dark text-light" required minlength="5" maxlength="20">
+                  <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
+                  <input type="text" id="nombreUsuario" class="form-control bg-dark text-light" required minlength="5" maxlength="20">
                 </div>
                 <div class="mb-2">
                   <label for="email" class="form-label">Email</label>
@@ -529,5 +529,6 @@
     ></script>
     <script src="./js/filtrarPrincipal.js"></script>
     <script src="./js/paginaPrincipal.js"></script>
+    <script src="./js/registro.js" type="module"></script>
   </body>
 </html>
