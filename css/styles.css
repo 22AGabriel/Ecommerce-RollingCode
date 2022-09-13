@@ -80,10 +80,7 @@ body{
     height: 40px;
 }
 
-/* clase para filtro de busqueda pagina principal */
-.filterCardP{
-    display: none;
-}
+
 
 /* estilos de hover a la card */
 .ocultarCard{
@@ -173,7 +170,7 @@ body{
 
 .oficinas img{
     height: 300px;
-    /* object-fit: cover; */
+   
 }
 
 .card-perfil{
@@ -188,12 +185,12 @@ body{
     font-size: 30px;
 }
 
-/* estilos apgina detalle */
+/* estilos pagina detalle */
 .borderDetalle{
     border: transparent;
 }
 
-/* boton del cca */
+
 
 
 @media all and (max-width:540px){
