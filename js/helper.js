@@ -63,3 +63,60 @@ export function validarCantidad(input){
         return false;
     }
 }
+
+// VALIDACIONES FORMULARIO DE REGISTRO
+
+let listaUsuarios = JSON.parse(localStorage.getItem('listaUsuariosStorage')) || [];
+
+export function validarNombreUsuario(input){
+    let nombreBuscado = listaUsuarios.find((usuario) => usuario.nombre === input.value) || "";
+    if(input.value.length >= 5 && input.value.length <= 20){
+        if(input.value === nombreBuscado.nombre){
+            input.className = 'form-control bg-dark text-light is-invalid';
+            return false
+        } else{
+            input.className = 'form-control bg-dark text-light is-valid';
+            return true;
+        }
+    } else {
+     input.className = 'form-control bg-dark text-light is-invalid';
+     return false;
+    }
+}
+
+export function validarEmail(input){
+    let emailBuscado = listaUsuarios.find((usuario) => usuario.email === input.value) || ""
+    let emailIngresado = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+    if(emailIngresado.test(input.value)){
+        if(input.value === emailBuscado.email){
+            input.className = 'form-control bg-dark text-light is-invalid';
+            return false
+        } else{
+            input.className = 'form-control bg-dark text-light is-valid';
+            return true;
+        }
+    } else {
+        input.className = 'form-control bg-dark text-light is-invalid';
+        return false;
+    }
+}
+
+export function validarContraseniaRegistrada(input){
+    if(input.value.length >= 8){
+        input.className = 'form-control bg-dark text-light is-valid';
+        return true;
+    } else {
+        input.className = 'form-control bg-dark text-light is-invalid';
+        return false;
+    }
+}
+
+export function validarContraseniaConfirmar(input, password){
+    if(input.value === password.value){
+        input.className = 'form-control bg-dark text-light is-valid';
+        return true;
+    } else {
+        input.className = 'form-control bg-dark text-light is-invalid';
+        return false;
+    }
+}

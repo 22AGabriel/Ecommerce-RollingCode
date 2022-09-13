@@ -176,6 +176,30 @@ header{
 }
 
 
+/* clases de Daiana */
+header{
+    position: relative;
+    z-index: 1; 
+}
+.modalcolor{
+    background-color: rgba(0, 0, 0, 0.303);
+    color: white;
+}
+.botonModal{
+    background-color: black;
+    background: rgba(27, 26, 29, 0.7);
+    color: white;
+}
+.titulo{
+    font-family: cursive;
+    color: white;
+}
+.imgLogo{
+    object-fit: cover;
+    margin: 4px;
+}
+
+
 
 
 
