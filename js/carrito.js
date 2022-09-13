@@ -1,5 +1,5 @@
-
- let carrito =[];
+ 
+ let carrito =JSON.parse(localStorage.getItem("carrito"))||[];
  let tablaCarrito = document.getElementById("tabla-carrito");
  let contadorCarrito = document.getElementById("contadorCarrito")
 
@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",() => {
     if(localStorage.getItem("carrito")){
         carrito = JSON.parse(localStorage.getItem("carrito"));
         crearCarrito();
+    
     }
 })
 
@@ -28,7 +29,7 @@ document.addEventListener("DOMContentLoaded",() => {
   //eliminamos el producto seleccionado    
    carrito.splice(indice,1);
    crearCarrito();
-   
+   localStorage.setItem("carrito",JSON.stringify(carrito))
 }
 
 

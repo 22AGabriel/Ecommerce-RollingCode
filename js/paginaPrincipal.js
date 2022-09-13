@@ -45,6 +45,3 @@ function verPaginaDetalle(codigoProducto){
 
 
 
-// function mostrarModalCarrito(){
-//     modalCarrito.show()
-// }
