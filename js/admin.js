@@ -1,4 +1,5 @@
 import { Producto } from "./classProducto.js";
+import { Usuario } from "./classUsuario.js";
 import {validarNombre, validarImagen, validarPrecio, validarDescripcion, validarCategoria, validarCantidad} from "./helper.js"
 
 let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage')) || [];
@@ -97,9 +98,6 @@ function crearProductoNuevo(){
     modalFormulario.hide();
 }
 
-
-
-
 function limpiarFormulario(){
     formulario.reset()
     nombre.className = 'form-control bg-dark text-light'
@@ -113,7 +111,6 @@ function limpiarFormulario(){
 function guardarProductoEnLocalStorage(){
     localStorage.setItem('listaProductosStorage', JSON.stringify(listaProductos))
 }
-
 
 // borrar Producto
 
@@ -200,7 +197,6 @@ function actualizarProducto(){
 
 // LISTA DE USUARIOS
 
-
 let listaUsuarios = JSON.parse(localStorage.getItem('listaUsuariosStorage')) || [];
 let modalListaUsuarios = new bootstrap.Modal(document.getElementById("modalListaUsuarios"));
 let btnVerUsuarios = document.getElementById("btnVerUsuarios");
@@ -232,6 +228,38 @@ function crearFilaUsuario(usuario){
         <td>${usuario.nombre}</td>
         <td>${usuario.email}</td>
         <td>${rango}</td>
-        <td class="text-center"><button type="button" class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></button></td>
+        <td class="text-center"><button type="button" class="btn btn-outline-danger" onclick="borrarUsuario('${usuario.email}')"><i class="bi bi-trash-fill"></i></button></td>
     </tr>`
 }
+
+function guardarUsuarioEnLocalStorage(){
+    localStorage.setItem('listaUsuariosStorage', JSON.stringify(listaUsuarios))
+}
+
+window.borrarUsuario = function (email){
+    console.log(email)
+    //buscar el usuario con el mail en el arreglo y borrarlo
+    let copiaListaUsuarios = listaUsuarios.filter((usuario)=>{return usuario.email != email});
+    listaUsuarios = copiaListaUsuarios
+    //actualizar el localstorage
+    guardarUsuarioEnLocalStorage()
+    //actualizar tabla
+    borrarTablaUsuarios();
+    cargarUsuarios();
+}
+
+function borrarTablaUsuarios(){
+    let tablaUsuarios = document.getElementById("tablaUsuarios");
+    tablaUsuarios.innerHTML = "";
+}
+
+// GENERADOR DE USUARIO ADMINISTRADOR
+
+/* 
+let administrador = new Usuario("Gabriel","gabrielazubel63t@gmail.com", 12345678)
+
+administrador.administrador = true
+
+listaUsuarios.push(administrador)
+guardarUsuarioEnLocalStorage() 
+*/
