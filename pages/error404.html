@@ -57,29 +57,209 @@
             </div>
         </article>
        </section>
-    </main>
-    <footer>
-        <section class="bg-success">
-            <div class="container">
-              <div class="row">
-                <div class="col-12 col-md-4 text-center my-4">
-                  <a href="../index.html" class="text-decoration-none text-dark">RollingSporting</a>
-                </div>
-                <div class="col-12 col-md-4 text-center my-4">
-                  <a href="sobreNosotros.html" class="text-decoration-none text-dark">Acerca de Nosotros</a> <br>
-                  <a href="error404.html" class="text-decoration-none text-dark">Contactanos</a><br>
-                  <a href="error404.html" class="text-decoration-none text-dark">...</a><br>
-                  <a href="error404.html" class="text-decoration-none text-dark">...</a>
-                </div>
-                <div class="col-12 col-md-4 text-center my-4">
-                  <h5>Seguinos en nuestras redes</h5>
-                  <a href="../index.html"><i class="bi bi-facebook text-dark"></i></a>
-                  <a href="../index.html"><i class="bi bi-twitter text-dark"></i></a>
-                  <a href="../index.html"><i class="bi bi-instagram text-dark"></i></a>
-                </div>
+       <!--Seccion Modal -->
+      
+<!-- Modal para iniciar seccion -->
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeIngresar1"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeIngresar1Label"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="inputPassword" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="inputPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Iniciar Seccion
+                </button>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+      </section>
+<!-- Modal para registrarse -->
+
+      <section>
+        <div
+          class="modal fade"
+          id="modalDeRegistrar"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="modalDeRegistrarLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content modalcolor">
+              <div class="modal-header">
+                <button 
+                type="button" 
+                class="btn-close bg-light" 
+                data-bs-dismiss="modal" 
+                aria-label="Close"></button>
+            </div>
+              <div class="modal-body">
+                <form>
+                  <label for="usuario" class="form-label"
+                    >Nombre de Usuario</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="usuario"
+                    placeholder="Juan Perez"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+                  <label for="Email" class="form-label"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="Email"
+                    placeholder="juanperez@gmail.com"
+                    minlength="5"
+                    maxlength="15"
+                    required
+                  />
+
+                  <label for="Password" class="form-label"
+                  >Contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="Password"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                  <label for="ConfirmarPassword" class="form-label"
+                  >Confirmar contraseña</label
+                >
+
+                <input
+                  type="password"
+                  class="form-control"
+                  id="ConfirmarPassword"
+                  placeholder="Contraseña"
+                  minlength="8"
+                  maxlength="15"
+                  required
+                />
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn form-control botonModal"
+                  data-bs-dismiss="modal"
+                >
+                  Registrarse
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-success py-4">
+      <section class="container">
+        <article class="row text-secondary">
+          <aside class="col-12 col-md-4 text-center ">
+            <h5><a href="../index.html"
+              class="text-decoration-none text-dark">Rolling Sporting</a></h5>
+          </aside>
+          <aside class="col-12 col-md-4 text-center">
+            <h5 class="text-dark">Seguinos en nuestras redes</h5>
+            <div class="text-center">
+              <a href="error404.html" class="text-dark"
+                ><i class="bi bi-youtube fs-3 p-2"></i
+              ></a>
+              <a href="error404.html" class="text-dark"
+                ><i class="bi bi-facebook fs-3 p-2"></i
+              ></a>
+              <a href="error404.html" class="text-dark">
+                <i class="bi bi-twitter fs-3 p-2"></i
+              ></a>
+              <a href="error404.html" class="text-dark">
+                <i class="bi bi-instagram fs-3 p-2"></i
+              ></a>
+            </div>
+          </aside>
+          <aside class="col-12 col-md-4 text-center">
+            <h5 class="text-dark">Link</h5>
+            <div>
+              <a
+                href="sobreNosotros.html"
+                class="link text-decoration-none text-dark"
+                >¿Quienes somos? </a
+              ><br />
+              <a
+                href="error404.html"
+                class="link text-decoration-none text-dark"
+                >Consultas</a
+              >
+              <br />
+              <a
+                href="error404.html"
+                class="link text-decoration-none text-dark"
+                >Privacidad</a
+              >
+              <br />
+            </div>
+          </aside>
+        </article>
+      </section>
     </footer>
 </body>
 </html>

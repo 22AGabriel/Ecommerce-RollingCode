@@ -68,6 +68,12 @@ body{
     height: 40px;
 }
 
+header{
+    position: relative;
+    z-index: 1; 
+}
+
+
 /* clase para filtro de busqueda pagina principal */
 .filterCardP{
     display: none;
@@ -90,7 +96,6 @@ body{
    align-items: center;
    flex-direction: column;
    color: white;
-   
 }
 
 .card-j:hover .ocultarCard{
@@ -169,12 +174,42 @@ body{
     color: white;
 }
 
+<<<<<<< HEAD
 .carrito{
     height: 45px;
     padding-top: 2px;
     margin-top: 12px;
     font-size: 25px;
 }
+=======
+
+/* clases de Daiana */
+header{
+    position: relative;
+    z-index: 1; 
+}
+.modalcolor{
+    background-color: rgba(0, 0, 0, 0.303);
+    color: white;
+}
+.botonModal{
+    background-color: black;
+    background: rgba(27, 26, 29, 0.7);
+    color: white;
+}
+.titulo{
+    font-family: cursive;
+    color: white;
+}
+.imgLogo{
+    object-fit: cover;
+    margin: 4px;
+}
+
+
+
+
+>>>>>>> 5047bb8c7e3e369091d84982dfa70d6245feff3f
 
 /* estilos apgina detalle */
 .borderDetalle{
@@ -308,5 +343,8 @@ body{
     .oficinas img{
         height: 500px;
      }
+<<<<<<< HEAD
     
+=======
+>>>>>>> 5047bb8c7e3e369091d84982dfa70d6245feff3f
 }
