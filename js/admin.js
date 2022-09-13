@@ -197,3 +197,41 @@ function actualizarProducto(){
         'success'
       )
 }
+
+// LISTA DE USUARIOS
+
+
+let listaUsuarios = JSON.parse(localStorage.getItem('listaUsuariosStorage')) || [];
+let modalListaUsuarios = new bootstrap.Modal(document.getElementById("modalListaUsuarios"));
+let btnVerUsuarios = document.getElementById("btnVerUsuarios");
+
+btnVerUsuarios.addEventListener("click", mostrarLista);
+
+function mostrarLista(){
+    modalListaUsuarios.show();
+}
+
+cargarUsuarios();
+
+function cargarUsuarios(){
+    if(listaUsuarios.length > 0){
+        listaUsuarios.forEach(usuario => {crearFilaUsuario(usuario)});
+    }
+}
+
+function crearFilaUsuario(usuario){
+    let rango = ""
+    if(usuario.administrador){
+        rango = "Administrador"
+    } else {
+        rango = "Invitado"
+    }
+    let tablaUsuarios = document.getElementById("tablaUsuarios");
+    tablaUsuarios.innerHTML += `
+    <tr>
+        <td>${usuario.nombre}</td>
+        <td>${usuario.email}</td>
+        <td>${rango}</td>
+        <td class="text-center"><button type="button" class="btn btn-outline-danger"><i class="bi bi-trash-fill"></i></button></td>
+    </tr>`
+}
