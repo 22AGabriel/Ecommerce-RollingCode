@@ -169,9 +169,12 @@ body{
     color: white;
 }
 
-
-
-
+.carrito{
+    height: 45px;
+    padding-top: 2px;
+    margin-top: 12px;
+    font-size: 25px;
+}
 
 /* estilos apgina detalle */
 .borderDetalle{

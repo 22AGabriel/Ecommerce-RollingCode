@@ -42,6 +42,4 @@ function verPaginaDetalle(codigoProducto){
 
 
 
-// agregar al carrito los productos
-
 

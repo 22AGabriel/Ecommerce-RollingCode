@@ -148,7 +148,7 @@
         <h3 class="display-4 text-center text-light">Indumentaria</h3>
         <div class="text-center d-flex justify-content-center divBusqueda">
           <input type="search" placeholder="Buscar" class="form-control  btn-busqueda mt-3 inputFilterCard" >
-          <button class="btn btn-success m" data-bs-toggle="modal" data-bs-target="#modal-carrito"><i class="bi bi-cart-plus-fill"></i></button>
+          <button class="btn btn-success carrito" data-bs-toggle="modal" data-bs-target="#modal-carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
         </div>
         <article class="row text-center mt-5" id="grilla">
           
@@ -466,27 +466,16 @@
                           <th scope="col">Código</th>
                           <th scope="col">Nombre</th>
                           <th scope="col">Precio</th>
-                          <th scope="col">Description</th>
-                          <th scope="col">Categoria</th>
-                          <th scope="col">Stock</th>
+                          <th scope="col">Eliminar</th>
                         </tr>
                       </thead>
                       <tbody id="tabla-carrito">
                       </tbody> 
                 </table>
             </div>
-              <!-- <div class="col-12 col-md-6">
-                <img src="./img/camperaPuma2.jpg" alt="" class="w-100">
-              </div>
-              <div class="col-12 col-md-6">
-                <h5>campera</h5>
-                <p>precio</p>
-                <button class="btn btn-success">Cancelar</button>
-              </div> -->
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
           </div>
         </div>
