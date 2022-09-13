@@ -160,7 +160,7 @@ body{
 }
 
 .oficinas img{
-    height: 600px;
+    height: 400px;
     /* object-fit: cover; */
 }
 
@@ -260,20 +260,7 @@ body{
 
 @media all and (max-width:991px){
     .ocultarP{
-        background-color: rgba(53, 43, 43, 0.548);
-        bottom: 0px;
-        transition: 1s ease;
-        height:0;
-        left: 0;
-        top: 0;
-        overflow: hidden;
-        position: absolute;
-        width: 54px;
-        padding: 10px 0px;
-       text-align: center;
-       display: flex;
-       justify-content: center;
-       align-items: end; 
+       
        display: none;
      }
      
