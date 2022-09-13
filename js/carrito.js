@@ -1,9 +1,9 @@
 
-let carritoLocal = JSON.parse(localStorage.getItem("listaCarrito"))||[];
 let carrito =[];
 let tablaCarrito = document.getElementById("tabla-carrito");
 let contadorCarrito = document.getElementById("contadorCarrito")
 
+// si la pagina recarga llamamos al carrito en el localstorage
 document.addEventListener("DOMContentLoaded",() => {
     if(localStorage.getItem("carrito")){
         carrito = JSON.parse(localStorage.getItem("carrito"));
