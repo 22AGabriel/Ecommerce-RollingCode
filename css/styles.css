@@ -96,7 +96,6 @@ header{
    align-items: center;
    flex-direction: column;
    color: white;
-   
 }
 
 .card-j:hover .ocultarCard{
@@ -246,7 +245,7 @@ header{
  }
  
  .oficinas img{
-    height: 384px;
+    height: 284px;
  }
 
  .divBusqueda{
@@ -307,4 +306,8 @@ header{
     .ver{
         display: initial;
     }
+
+    .oficinas img{
+        height: 500px;
+     }
 }
