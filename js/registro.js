@@ -24,16 +24,21 @@ function showForm(){
 
 function registrarse(e){
     e.preventDefault();
-    let nuevoUsuario = new Usuario(
-        nombreUsuario.value,
-        email.value,
-        contraseniaRegistro.value
-    )
-    listaUsuarios.push(nuevoUsuario)
-    console.log(listaUsuarios)
-    guardarUsuarioEnLocalStorage();
-    limpiarFormulario();
-    modalRegistro.hide();
+    if(validarNombreUsuario(nombreUsuario) === true && 
+    validarEmail(email) && 
+    validarContraseniaRegistrada(contraseniaRegistro) && 
+    validarContraseniaConfirmar(contraseniaConfirmar, contraseniaRegistro)){
+        let nuevoUsuario = new Usuario(
+            nombreUsuario.value,
+            email.value,
+            contraseniaRegistro.value
+        )
+        listaUsuarios.push(nuevoUsuario)
+        console.log(listaUsuarios)
+        guardarUsuarioEnLocalStorage();
+        limpiarFormulario();
+        modalRegistro.hide();
+    }
 }
 
 function guardarUsuarioEnLocalStorage(){
