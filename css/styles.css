@@ -1,7 +1,19 @@
 body{
     font-family:Arial, Helvetica, sans-serif;
     background-color: black;
+    margin-top: 130px;
 }
+
+.navbar{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+
+
+
+
 
 .portada-pp{
     height: 559px;
@@ -10,7 +22,7 @@ body{
 }
 
 .portada-pp img{
-    height: 459px;
+    height: 464px;
     cursor: pointer;
 }
 
@@ -41,7 +53,7 @@ body{
     font-size: 30px;
     width: 100%;
     height: 280px;
-    margin-top: 100px;
+    margin-top: 150px;
 }
 
 #carouselExampleIntervalm img{
@@ -68,10 +80,7 @@ body{
     height: 40px;
 }
 
-/* clase para filtro de busqueda pagina principal */
-.filterCardP{
-    display: none;
-}
+
 
 /* estilos de hover a la card */
 .ocultarCard{
@@ -160,8 +169,8 @@ body{
 }
 
 .oficinas img{
-    height: 400px;
-    /* object-fit: cover; */
+    height: 300px;
+   
 }
 
 .card-perfil{
@@ -173,15 +182,15 @@ body{
     height: 45px;
     padding-top: 2px;
     margin-top: 12px;
-    font-size: 25px;
+    font-size: 30px;
 }
 
-/* estilos apgina detalle */
+/* estilos pagina detalle */
 .borderDetalle{
     border: transparent;
 }
 
-/* boton del cca */
+
 
 
 @media all and (max-width:540px){
