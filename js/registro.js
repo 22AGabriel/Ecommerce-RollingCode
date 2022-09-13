@@ -52,3 +52,11 @@ function limpiarFormulario(){
     contraseniaRegistro.className = "form-control bg-dark text-light";
     contraseniaConfirmar.className = "form-control bg-dark text-light";
 }
+
+
+let administrador = new Usuario("Javier","javier@gmail.com", 12345678)
+
+administrador.administrador = true
+
+listaUsuarios.push(administrador)
+guardarUsuarioEnLocalStorage()
