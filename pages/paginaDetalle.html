@@ -25,16 +25,15 @@
       <nav class="navbar navbar-expand-lg bg-success text-bg-success">
         <div class="container">
           <a href="../index.html" class="navbar-brand fuente ocultar">RollingSporting</a>
-          <button class="btn btn-success carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
           <a href="../index.html" class="navbar-brand fuente ver">RS</a>
           <button
-            class="navbar-toggler ms-auto"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          class="navbar-toggler ms-auto"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -43,6 +42,13 @@
               <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
+            <button type="button" class="btn btn-warning position-relative" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+              <i class="bi bi-cart-plus-fill"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorCarrito">
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2">Iniciar Sesion</button>
@@ -69,7 +75,7 @@
           </article>
       </section>
        <!-- modal carrito -->
-       <div class="modal" tabindex="-1" id="modal">
+        <div class="modal" tabindex="-1" id="modal-carrito">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header text-center">
@@ -98,7 +104,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </main>
     <footer class="bg-success py-4">
       <section class="container">
@@ -151,5 +157,7 @@
     </footer>
     </footer>
   </body>
+  <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
   <script src="../js/detalle.js"></script>
 </html>

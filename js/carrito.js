@@ -1,7 +1,7 @@
 
-let carrito =[];
-let tablaCarrito = document.getElementById("tabla-carrito");
-let contadorCarrito = document.getElementById("contadorCarrito")
+ let carrito =[];
+ let tablaCarrito = document.getElementById("tabla-carrito");
+ let contadorCarrito = document.getElementById("contadorCarrito")
 
 
 // si la pagina recarga llamamos al carrito en el localstorage
@@ -14,13 +14,13 @@ document.addEventListener("DOMContentLoaded",() => {
 
 
 // iteramos sobre la lista de productos y buscamos el producto que llega por parametros
-function agregarCarrito(codigoCarrito){
+ function agregarCarrito(codigoCarrito){
     let item = listaProductos.find((item)=>item.codigo === codigoCarrito)
     carrito.push(item);
     crearCarrito();
 }
 
-function eliminarCarrito(codigo){
+ function eliminarCarrito(codigo){
     // buscamos el producto
    let itemC = carrito.find((producto)=>producto.codigo === codigo);
   // buscamos el indice del producto   

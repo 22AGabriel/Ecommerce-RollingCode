@@ -25,8 +25,8 @@
       <nav class="navbar navbar-expand-lg bg-success text-bg-success">
         <div class="container">
           <a href="index.html" class="navbar-brand fuente ocultar">RollingSporting</a>
-          <button class="btn btn-success carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
           <a href="index.html" class="navbar-brand fuente ver">RS</a>
+          <!-- <button class="btn btn-success carrito" data-bs-toggle="modal" data-bs-target="#modal-carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button> -->
           <button
             class="navbar-toggler ms-auto"
             type="button"
@@ -43,6 +43,13 @@
               <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
+            <button type="button" class="btn btn-warning position-relative" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+              <i class="bi bi-cart-plus-fill"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorCarrito">
+                99+
+                <span class="visually-hidden">unread messages</span>
+              </span>
+            </button>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modalInicioSesionIndex">Iniciar Sesión</button>

@@ -1,3 +1,5 @@
+
+
 let carrito =[];
 let tablaCarrito = document.getElementById("tabla-carrito");
 let contadorCarrito = document.getElementById("contadorCarrito")
@@ -29,6 +31,9 @@ articuloDetalle.innerHTML = `
 </div>
 
 `
+
+
+
 
 // si la pagina recarga llamamos al carrito en el localstorage
 document.addEventListener("DOMContentLoaded",() => {
