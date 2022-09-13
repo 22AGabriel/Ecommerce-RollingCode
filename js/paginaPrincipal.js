@@ -4,7 +4,6 @@ let modalCarrito = new bootstrap.Modal(document.getElementById('modal-carrito'))
 let botonCarrito =document.querySelector(".carrito")
 botonCarrito.addEventListener("click",mostrarModalCarrito)
 
-
 function cargarProducto(){
     if(listaProductos.length > 0){
       listaProductos.forEach(producto => {crearProducto(producto)});
@@ -36,16 +35,12 @@ function crearProducto(producto){
     `
 }
 
-
 cargarProducto();
 
 function verPaginaDetalle(codigoProducto){
     console.log(codigoProducto);
     window.location.href = window.location.origin + '/pages/paginaDetalle.html?codigo='+ codigoProducto;
 }
-
-
-
 
 function mostrarModalCarrito(){
     modalCarrito.show()

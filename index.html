@@ -25,7 +25,6 @@
       <nav class="navbar navbar-expand-lg bg-success text-bg-success">
         <div class="container">
           <a href="index.html" class="navbar-brand fuente ocultar">RollingSporting</a>
-          <button class="btn btn-success carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
           <a href="index.html" class="navbar-brand fuente ver">RS</a>
           <button
             class="navbar-toggler ms-auto"
@@ -43,13 +42,19 @@
               <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="navBarOption">
+               <li class="nav-item text-dark">
+                <h5>Nombre</h5>
+              </li>
               <li class="nav-item">
+                <button class="btn btn-success carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
+              </li> 
+               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnLogIn">Iniciar Sesión</button>
               </li>
               <li class="nav-item">
                 <button class="btn btn-outline-dark mt-2 mb-2" id="btnRegistrarse">Registrarse</button>
-              </li>
+              </li> 
             </ul>
           </div>
         </div>
@@ -560,5 +565,6 @@
     <script src="./js/paginaPrincipal.js"></script>
     <script src="./js/registro.js" type="module"></script>
     <script src="./js/logIn.js" type="module"></script>
+    <script src="./js/navBar.js"></script>
   </body>
 </html>

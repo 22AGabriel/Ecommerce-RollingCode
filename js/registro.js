@@ -11,7 +11,9 @@ let email = document.getElementById("email")
 let contraseniaRegistro = document.getElementById("contraseniaRegistro")
 let contraseniaConfirmar = document.getElementById("contraseniaConfirmar")
 
-btnRegistrarse.addEventListener("click", showForm);
+if(btnRegistrarse){
+    btnRegistrarse.addEventListener("click", showForm);
+}
 formularioRegistro.addEventListener('submit', registrarse);
 nombreUsuario.addEventListener("blur", () => {validarNombreUsuario(nombreUsuario)});
 email.addEventListener("blur", () => {validarEmail(email)});
@@ -34,7 +36,6 @@ function registrarse(e){
             contraseniaRegistro.value
         )
         listaUsuarios.push(nuevoUsuario)
-        console.log(listaUsuarios)
         guardarUsuarioEnLocalStorage();
         limpiarFormulario();
         modalRegistro.hide();
@@ -52,3 +53,12 @@ function limpiarFormulario(){
     contraseniaRegistro.className = "form-control bg-dark text-light";
     contraseniaConfirmar.className = "form-control bg-dark text-light";
 }
+
+// CODIGO PARA AGREGAR ADMINISTRADOR
+
+// let administrador = new Usuario("Gabriel", "gabrielazubel63t@gmail.com", 12345678);
+
+// administrador.administrador = true
+
+// listaUsuarios.push(administrador);
+// guardarUsuarioEnLocalStorage();

@@ -145,3 +145,9 @@ export function buscarContrasenia(mailUsuario, password){
         return false
     }
 } 
+
+export function devolverUsuario(input){
+    let usuarioBuscado = listaUsuarios.find((usuario) => usuario.nombre === input.value) || listaUsuarios.find((usuario) => usuario.email === input.value) || "";
+
+    return usuarioBuscado;
+}
