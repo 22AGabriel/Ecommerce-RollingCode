@@ -8,8 +8,6 @@ let liRegistrar = document.getElementById("liRegistrar");
 let liAdmin = document.getElementById("liAdmin");
 let aAdmin = document.getElementById("aAdmin");
 
-console.log(usuarioIniciado)
-
 if(usuarioIniciado.administrador === true){
     usuarioAdmin();
 } else if (usuarioIniciado.administrador === false){
