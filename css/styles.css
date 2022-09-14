@@ -188,7 +188,9 @@ body{
     border: transparent;
 }
 
-
+.filterCardP{
+    display: none;
+}
 
 
 @media all and (max-width:540px){

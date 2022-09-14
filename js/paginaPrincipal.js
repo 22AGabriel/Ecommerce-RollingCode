@@ -39,3 +39,6 @@ function verPaginaDetalle(codigoProducto){
     console.log(codigoProducto);
     window.location.href = window.location.origin + '/pages/paginaDetalle.html?codigo='+ codigoProducto;
 }
+
+
+
