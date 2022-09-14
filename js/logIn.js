@@ -28,6 +28,7 @@ function usuarioIniciado(){
 
 function logOut(){
     localStorage.removeItem('UsuarioIniciadoStorage');
-    location.reload();
+    if(location.href = 'admin.html'){
+        location.href = '../index.html';
+    }
 }
-
