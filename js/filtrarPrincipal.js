@@ -8,10 +8,11 @@ function filtroCard(input,selector){
         }
         
         
-    
+     
+        
     })
 }
 
 
 
-filtroCard(".inputFilterCard",".filterC")
+filtroCard(".inputFilterCard",".filterC");
