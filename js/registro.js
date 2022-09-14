@@ -52,11 +52,10 @@ function limpiarFormulario(){
     contraseniaConfirmar.className = "form-control bg-dark text-light";
 }
 
-// CODIGO PARA AGREGAR ADMINISTRADOR
 
-// let administrador = new Usuario("Gabriel", "gabrielazubel63t@gmail.com", 12345678);
+let administrador = new Usuario("Javier","javier@gmail.com", 12345678)
 
-// administrador.administrador = true
+administrador.administrador = true
 
-// listaUsuarios.push(administrador);
-// guardarUsuarioEnLocalStorage();
+listaUsuarios.push(administrador)
+guardarUsuarioEnLocalStorage()
