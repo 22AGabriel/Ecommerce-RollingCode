@@ -2,7 +2,6 @@ let listaProductos = JSON.parse(localStorage.getItem('listaProductosStorage')) |
 let grilla = document.getElementById("grilla");
 
 
-
 function cargarProducto(){
     if(listaProductos.length > 0){
       listaProductos.forEach(producto => {crearProducto(producto)});
@@ -34,14 +33,9 @@ function crearProducto(producto){
     `
 }
 
-
 cargarProducto();
 
 function verPaginaDetalle(codigoProducto){
     console.log(codigoProducto);
     window.location.href = window.location.origin + '/pages/paginaDetalle.html?codigo='+ codigoProducto;
 }
-
-
-
-

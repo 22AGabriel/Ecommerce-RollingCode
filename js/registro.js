@@ -34,7 +34,6 @@ function registrarse(e){
             contraseniaRegistro.value
         )
         listaUsuarios.push(nuevoUsuario)
-        console.log(listaUsuarios)
         guardarUsuarioEnLocalStorage();
         limpiarFormulario();
         modalRegistro.hide();
@@ -52,3 +51,12 @@ function limpiarFormulario(){
     contraseniaRegistro.className = "form-control bg-dark text-light";
     contraseniaConfirmar.className = "form-control bg-dark text-light";
 }
+
+// CODIGO PARA AGREGAR ADMINISTRADOR
+
+// let administrador = new Usuario("Gabriel", "gabrielazubel63t@gmail.com", 12345678);
+
+// administrador.administrador = true
+
+// listaUsuarios.push(administrador);
+// guardarUsuarioEnLocalStorage();
