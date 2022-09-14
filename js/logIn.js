@@ -17,7 +17,6 @@ function mostrarLogIn(){
 
 function logIn(){
     if(buscarUsuario(usuarioLogIn) && buscarContrasenia(usuarioLogIn, contraseniaLogIn)){
-        console.log("hola")
         usuarioIniciado();
         modalLogIn.hide();
     }
