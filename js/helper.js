@@ -120,3 +120,34 @@ export function validarContraseniaConfirmar(input, password){
         return false;
     }
 }
+
+// VALIDACION DE INICIO DE SESION
+
+export function buscarUsuario(input){
+    let usuarioBuscado = listaUsuarios.find((usuario) => usuario.nombre === input.value) || listaUsuarios.find((usuario) => usuario.email === input.value) || "";
+
+    if(input.value === usuarioBuscado.email || input.value === usuarioBuscado.nombre){
+        return true
+    } else {
+        input.className = 'form-control bg-dark text-light is-invalid';
+        return false
+    }
+}
+
+export function buscarContrasenia(mailUsuario, password){
+    let usuarioBuscado = listaUsuarios.find((usuario) => usuario.email === mailUsuario.value) || 
+    listaUsuarios.find((usuario) => usuario.nombre === mailUsuario.value) || "";
+
+    if(parseFloat(usuarioBuscado.contrasenia) == password.value){
+        return true
+    } else {
+        password.className = 'form-control bg-dark text-light is-invalid';
+        return false
+    }
+} 
+
+export function devolverUsuario(input){
+    let usuarioBuscado = listaUsuarios.find((usuario) => usuario.nombre === input.value) || listaUsuarios.find((usuario) => usuario.email === input.value) || "";
+
+    return usuarioBuscado;
+}

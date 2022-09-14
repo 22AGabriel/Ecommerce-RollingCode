@@ -35,11 +35,31 @@
                   <button class="btn btn-outline-dark" type="submit">Search</button>
                 </form>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                    <button class="btn btn-outline-dark mt-2 mb-2 me-2">Iniciar Sesion</button>
+                  <li class="nav-item mt-3 mb-2 me-2 ocultarNav" id="liNombre">
+                    <h5><a href="error404.html" class="text-dark text-decoration-none" id="aNombre">Nombre</a></h5>
                   </li>
-                  <li class="nav-item">
-                    <button class="btn btn-outline-dark mt-2 mb-2">Registrarse</button>
+                  <li class="nav-item ocultarNav" id="liCarrito">
+                    <button type="button" class="btn btn-outline-warning position-relative mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                      <i class="bi bi-cart-plus-fill"></i>
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="contadorCarrito">
+                        0
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    </button>
+                  </li> 
+                  <li class="nav-item" id="liLogIn">
+                    <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnLogIn">Iniciar Sesión</button>
+                  </li>
+                  <li class="nav-item" id="liRegistrar">
+                    <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnRegistrarse">Registrarse</button>
+                  </li> 
+                  <li class="nav-item ocultarNav" id="liAdmin">
+                    <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnRegistrarse">
+                      <a href="admin.html" class="text-dark text-decoration-none">Administrador</a>
+                    </button>
+                  </li> 
+                  <li class="nav-item ocultarNav" id="liLogOut">
+                    <button class="btn btn-outline-dark mt-2 mb-2 me-2">Cerrar Sesión</button>
                   </li>
                 </ul>
               </div>
@@ -47,12 +67,16 @@
           </nav>
     </header>
     <main>
-        <section class="container">
+        <section class="container sectionAdm">
             <div class="my-5 text-center">
                 <button type="button" 
                 class="btn btn-outline-success"
                 id="btnCrearProducto"
                 >Agregar producto</button>
+                <button type="button" 
+                class="btn btn-outline-warning"
+                id="btnVerUsuarios"
+                >Usuarios</button>
             </div>
             <article class="table-responsive">
                 <table class="table text-white">
@@ -77,7 +101,7 @@
             <div class="modal-dialog">
                 <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
-                        <h1>Producto nuevo</h1>
+                        <h5>Producto nuevo</h5>
                         <button 
                         type="button" 
                         class="btn-close bg-secondary" 
@@ -128,159 +152,89 @@
                 </div>
             </div>
         </div>
-        <!--Seccion Modal -->
-<!-- Modal para iniciar seccion -->
-      <section>
-        <div
-          class="modal fade"
-          id="modalDeIngresar"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="modalDeIngresarLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content modalcolor">
-              <div class="modal-header">
-                <button 
-                type="button" 
-                class="btn-close bg-light" 
-                data-bs-dismiss="modal" 
-                aria-label="Close"></button>
+      <!--Modal lista de usuarios-->
+      <div class="modal fade" id="modalListaUsuarios" tabindex="-1" aria-labelledby="modalUsuarios" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalUsuarios">Usuarios</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-              <div class="modal-body">
-                <form>
-                  <label for="email" class="form-label"
-                    >E-mail</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="juanperez@gmail.com"
-                    minlength="5"
-                    maxlength="15"
-                    required
-                  />
-
-                  <label for="inputPassword" class="form-label"
-                  >Contraseña</label
-                >
-
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword"
-                  placeholder="Contraseña"
-                  minlength="8"
-                  maxlength="15"
-                  required
-                />
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn form-control botonModal"
-                  data-bs-dismiss="modal"
-                >
-                  Iniciar Seccion
-                </button>
+            <div class="modal-body">
+              <div class="table-responsive">
+                <table class="table text-white">
+                  <thead>
+                    <tr class="text-center">
+                      <th scope="col">Usuario</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">Rango</th>
+                      <th scope="col">Eliminar</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tablaUsuarios">
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </div>
-      </section>
-<!-- Modal para registrarse -->
-
-      <section>
-        <div
-          class="modal fade"
-          id="modalDeRegistrar"
-          data-bs-backdrop="static"
-          data-bs-keyboard="false"
-          tabindex="-1"
-          aria-labelledby="modalDeRegistrarLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content modalcolor">
-              <div class="modal-header">
-                <button 
-                type="button" 
-                class="btn-close bg-light" 
-                data-bs-dismiss="modal" 
-                aria-label="Close"></button>
+      </div>
+      <!-- Modal Inicio Sesion-->
+      <div class="modal fade" id="modalInicioSesionIndex" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title">Iniciar Sesión</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-              <div class="modal-body">
-                <form>
-                  <label for="usuario" class="form-label"
-                    >Nombre de Usuario</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="usuario"
-                    placeholder="Juan Perez"
-                    minlength="5"
-                    maxlength="15"
-                    required
-                  />
-                  <label for="Email" class="form-label"
-                    >E-mail</label
-                  >
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="Email"
-                    placeholder="juanperez@gmail.com"
-                    minlength="5"
-                    maxlength="15"
-                    required
-                  />
-
-                  <label for="Password" class="form-label"
-                  >Contraseña</label
-                >
-
-                <input
-                  type="password"
-                  class="form-control"
-                  id="Password"
-                  placeholder="Contraseña"
-                  minlength="8"
-                  maxlength="15"
-                  required
-                />
-                  <label for="ConfirmarPassword" class="form-label"
-                  >Confirmar contraseña</label
-                >
-
-                <input
-                  type="password"
-                  class="form-control"
-                  id="ConfirmarPassword"
-                  placeholder="Contraseña"
-                  minlength="8"
-                  maxlength="15"
-                  required
-                />
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button
-                  type="button"
-                  class="btn form-control botonModal"
-                  data-bs-dismiss="modal"
-                >
-                  Registrarse
-                </button>
-              </div>
+            <div class="modal-body">
+              <form id="btnIniciar">
+                <div class="mb-2">
+                  <label for="usuario" class="form-label">Email o nombre de usuario</label>
+                  <input type="text" id="usuario" class="form-control bg-dark text-light" required>
+                </div>
+                <div class="mb-2">
+                  <label for="contrasenia" class="form-label">Contraseña</label>
+                  <input type="password" id="contrasenia" class="form-control bg-dark text-light" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+              </form>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+      <!-- Modal Registrarse-->
+      <div class="modal fade" id="modalRegistrarse" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content bg-dark text-white">
+            <div class="modal-header">
+              <h5 class="modal-title">Iniciar Sesión</h5>
+              <button type="button" class="btn-close bg-secondary" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form id="btnRegistrar">
+                <div class="mb-2">
+                  <label for="nombreUsuario" class="form-label">Nombre de usuario</label>
+                  <input type="text" id="nombreUsuario" class="form-control bg-dark text-light" required minlength="5" maxlength="20">
+                </div>
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control bg-dark text-light" required>
+                </div>
+                <div class="mb-2">
+                  <label for="contraseniaRegistro" class="form-label">Contraseña</label>
+                  <input type="password" id="contraseniaRegistro" class="form-control bg-dark text-light" required minlength="8">
+                </div>
+                <div class="mb-2">
+                  <label for="contraseniaConfirmar" class="form-label">Confirmar contraseña</label>
+                  <input type="password" id="contraseniaConfirmar" class="form-control bg-dark text-light" required minlength="8">
+                </div>
+                <button type="submit" class="btn btn-success w-100">Registrarse</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="bg-success py-4">
       <section class="container">
@@ -292,39 +246,19 @@
           <aside class="col-12 col-md-4 text-center">
             <h5 class="text-dark">Seguinos en nuestras redes</h5>
             <div class="text-center">
-              <a href="error404.html" class="text-dark"
-                ><i class="bi bi-youtube fs-3 p-2"></i
-              ></a>
-              <a href="error404.html" class="text-dark"
-                ><i class="bi bi-facebook fs-3 p-2"></i
-              ></a>
-              <a href="error404.html" class="text-dark">
-                <i class="bi bi-twitter fs-3 p-2"></i
-              ></a>
-              <a href="error404.html" class="text-dark">
-                <i class="bi bi-instagram fs-3 p-2"></i
-              ></a>
+              <a href="error404.html" class="text-dark"><i class="bi bi-youtube fs-3 p-2"></i></a>
+              <a href="error404.html" class="text-dark"><i class="bi bi-facebook fs-3 p-2"></i></a>
+              <a href="error404.html" class="text-dark"><i class="bi bi-twitter fs-3 p-2"></i></a>
+              <a href="error404.html" class="text-dark"><i class="bi bi-instagram fs-3 p-2"></i></a>
             </div>
           </aside>
           <aside class="col-12 col-md-4 text-center">
             <h5 class="text-dark">Link</h5>
             <div>
-              <a
-                href="sobreNosotros.html"
-                class="link text-decoration-none text-dark"
-                >¿Quienes somos? </a
-              ><br />
-              <a
-                href="error404.html"
-                class="link text-decoration-none text-dark"
-                >Consultas</a
-              >
+              <a href="sobreNosotros.html" class="link text-decoration-none text-dark">¿Quienes somos? </a><br />
+              <a href="error404.html" class="link text-decoration-none text-dark">Consultas</a>
               <br />
-              <a
-                href="error404.html"
-                class="link text-decoration-none text-dark"
-                >Privacidad</a
-              >
+              <a href="error404.html" class="link text-decoration-none text-dark">Privacidad</a>
               <br />
             </div>
           </aside>
@@ -335,6 +269,9 @@
     <script src="https://cdn.jsdelivr.net/npm/uuid@latest/dist/umd/uuidv4.min.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="../js/admin.js" type="module"></script>
+    <script src="../js/registro.js" type="module"></script>
+    <script src="../js/logIn.js" type="module"></script>
+    <script src="../js/navBar.js"></script>
 </body>
 </html>
 

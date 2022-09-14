@@ -34,7 +34,6 @@ function registrarse(e){
             contraseniaRegistro.value
         )
         listaUsuarios.push(nuevoUsuario)
-        console.log(listaUsuarios)
         guardarUsuarioEnLocalStorage();
         limpiarFormulario();
         modalRegistro.hide();
