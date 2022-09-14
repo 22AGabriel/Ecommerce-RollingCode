@@ -11,10 +11,6 @@ body{
     top: 0;
 }
 
-
-
-
-
 .portada-pp{
     height: 559px;
     width: 100%;
@@ -80,7 +76,9 @@ body{
     height: 40px;
 }
 
-
+.ocultarNav{
+    display: none;
+}
 
 /* estilos de hover a la card */
 .ocultarCard{
@@ -293,6 +291,7 @@ body{
     .r-dama{
         height: 213px;
     }
+
     .ocultar{
         display: none;
     }

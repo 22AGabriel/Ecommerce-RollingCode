@@ -15,8 +15,7 @@ function mostrarLogIn(){
     modalLogIn.show();
 }
 
-function logIn(e){
-    e.preventDefault();
+function logIn(){
     if(buscarUsuario(usuarioLogIn) && buscarContrasenia(usuarioLogIn, contraseniaLogIn)){
         console.log("hola")
         usuarioIniciado();

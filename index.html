@@ -43,23 +43,33 @@
               <input class="form-control me-2 search" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-dark" type="submit">Search</button>
             </form>
-            <button type="button" class="btn btn-warning position-relative" data-bs-toggle="modal" data-bs-target="#modal-carrito">
-              <i class="bi bi-cart-plus-fill"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contadorCarrito">
-                0
-                <span class="visually-hidden">unread messages</span>
-              </span>
-            </button>
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <button class="btn btn-success carrito"><i class="bi bi-cart-plus-fill"></i><span class="badge text-bg-warning" id="contadorCarrito">0</span></button>
+              <li class="nav-item mt-3 mb-2 me-2 ocultarNav" id="liNombre">
+                <h5><a href="./pages/error404.html" class="text-dark text-decoration-none" id="aNombre">Nombre</a></h5>
+              </li>
+              <li class="nav-item ocultarNav" id="liCarrito">
+                <button type="button" class="btn btn-outline-warning position-relative mt-2 mb-2 me-2" data-bs-toggle="modal" data-bs-target="#modal-carrito">
+                  <i class="bi bi-cart-plus-fill"></i>
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark" id="contadorCarrito">
+                    0
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </button>
               </li> 
-               <li class="nav-item">
+              <li class="nav-item" id="liLogIn">
                 <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnLogIn">Iniciar Sesión</button>
               </li>
-              <li class="nav-item">
-                <button class="btn btn-outline-dark mt-2 mb-2" id="btnRegistrarse">Registrarse</button>
+              <li class="nav-item" id="liRegistrar">
+                <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnRegistrarse">Registrarse</button>
               </li> 
+              <li class="nav-item ocultarNav" id="liAdmin">
+                <button class="btn btn-outline-dark mt-2 mb-2 me-2" id="btnRegistrarse">
+                  <a href="pages/admin.html" class="text-dark text-decoration-none">Administrador</a>
+                </button>
+              </li> 
+              <li class="nav-item ocultarNav" id="liLogOut">
+                <button class="btn btn-outline-dark mt-2 mb-2 me-2">Cerrar Sesión</button>
+              </li>
             </ul>
           </div>
         </div>
