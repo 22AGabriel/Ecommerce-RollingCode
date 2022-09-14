@@ -11,9 +11,7 @@ let email = document.getElementById("email")
 let contraseniaRegistro = document.getElementById("contraseniaRegistro")
 let contraseniaConfirmar = document.getElementById("contraseniaConfirmar")
 
-if(btnRegistrarse){
-    btnRegistrarse.addEventListener("click", showForm);
-}
+btnRegistrarse.addEventListener("click", showForm);
 formularioRegistro.addEventListener('submit', registrarse);
 nombreUsuario.addEventListener("blur", () => {validarNombreUsuario(nombreUsuario)});
 email.addEventListener("blur", () => {validarEmail(email)});

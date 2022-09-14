@@ -2,14 +2,14 @@ import {buscarUsuario, buscarContrasenia, devolverUsuario} from "./helper.js";
 
 const modalLogIn = new bootstrap.Modal(document.getElementById("modalInicioSesionIndex"));
 const btnLogIn = document.getElementById("btnLogIn");
+const btnLogOut = document.getElementById("liLogOut");
 let usuarioLogIn = document.getElementById("usuario");
 let contraseniaLogIn = document.getElementById("contrasenia");
 let btnIniciar = document.getElementById("btnIniciar")
 
-if(btnLogIn){
-    btnLogIn.addEventListener("click", mostrarLogIn);
-}
 btnIniciar.addEventListener("submit", logIn);
+btnLogIn.addEventListener("click", mostrarLogIn);
+btnLogOut.addEventListener("click", logOut);
 
 function mostrarLogIn(){
     modalLogIn.show();
@@ -26,3 +26,9 @@ function logIn(){
 function usuarioIniciado(){
     localStorage.setItem('UsuarioIniciadoStorage', JSON.stringify(devolverUsuario(usuarioLogIn)))
 }
+
+function logOut(){
+    localStorage.removeItem('UsuarioIniciadoStorage');
+    location.reload();
+}
+
