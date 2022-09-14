@@ -32,4 +32,3 @@ function logOut(){
         location.href = '../index.html';
     }
 }
-
