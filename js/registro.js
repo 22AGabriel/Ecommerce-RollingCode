@@ -52,9 +52,9 @@ function limpiarFormulario(){
     contraseniaConfirmar.className = "form-control bg-dark text-light";
 }
 
-// let administrador = new Usuario("Gabriel","gabrielazubel63t@gmail.com", 12345678)
-
-// administrador.administrador = true
-
-// listaUsuarios.push(administrador)
-// guardarUsuarioEnLocalStorage()
+if(listaUsuarios.length < 1){
+    let administrador = new Usuario("Gabriel","gabrielazubel63t@gmail.com", 12345678)
+    administrador.administrador = true
+    listaUsuarios.push(administrador)
+    guardarUsuarioEnLocalStorage()
+}
